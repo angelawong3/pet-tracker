@@ -1,0 +1,25 @@
+{
+  "name": "mvp-pet-app",
+  "version": "1.0.0",
+  "description": "## Table of Contents",
+  "main": "server.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/assets/css/main.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./public/assets/css/main.css --watch",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ss12932/mvp-pet-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ss12932/mvp-pet-app/issues"
+  },
+  "homepage": "https://github.com/ss12932/mvp-pet-app#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.5"
+  }
+}
