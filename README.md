@@ -1,48 +1,21 @@
-# mvp-pet-app ![License](https://img.shields.io/static/v1?label=License&message=MIT&color=green)
+# starter-kit
 
-## Table of Contents
+This is a boiler plate for your project 2. It comes preconfigured with `eslint` and `prettier`. When making commits through command-line, eslint will run and throw an error if there are any formatting issues with the code.
 
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+## Get started
+- Run npm install
+- Create a `.env` file and add your connection credentials
+- Run database schema if this is your first time running this.
+- Run `nodemon`
 
-## Description
+## List of Commands
 
-## Deployed Link
+#### Eslint
+```
+npm run eslint
+```
 
-## Github Repository Link
-
-## Screenshot
-
-## Installation
-
-Please follow the instructions below:
-
-None
-
-## Usage
-
-Please follow the instructions below:
-
-None
-
-## License
-
-This Project is licensed under MIT License, for more information please visit: [License](https://choosealicense.com/licenses/mit/)
-
-## Contributing
-
-None
-
-## Tests
-
-Please follow the instructions below:
-
-None
-
-## Questions
-
-None
+#### Unit Tests
+```
+npm run test
+```

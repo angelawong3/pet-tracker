@@ -1,25 +1,35 @@
 {
   "name": "mvp-pet-app",
   "version": "1.0.0",
-  "description": "## Table of Contents",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./public/assets/css/main.css",
-    "watch": "tailwindcss -i ./src/input.css -o ./public/assets/css/main.css --watch",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ss12932/mvp-pet-app.git"
+    "build": "tailwindcss -i ./input.css -o ./public/css/main.css",
+    "watch": "tailwindcss -i ./input.css -o ./public/css/main.css --watch",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js",
+    "prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
+    "lint": "eslint \"**/*.js\"",
+    "lint-fix": "eslint --fix \"**/*.js\"",
+    "precommit": "npm run lint-fix && git add .",
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ss12932/mvp-pet-app/issues"
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
   },
-  "homepage": "https://github.com/ss12932/mvp-pet-app#readme",
   "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
     "tailwindcss": "^3.1.5"
   }
 }

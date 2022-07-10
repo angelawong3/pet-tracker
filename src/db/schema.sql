@@ -1,3 +1,0 @@
-DROP DATABASE IF EXISTS mvp_db;
-
-CREATE DATABASE mvp_db;
