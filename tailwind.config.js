@@ -1,5 +1,9 @@
 module.exports = {
-  content: ['./public/*.html', './public/js/*.js'],
+  content: [
+    './public/*.html',
+    './public/js/*.js',
+    './node_modules/tw-elements/dist/js/**/*.js',
+  ],
   theme: {
     screens: {
       sm: '480px',
@@ -66,5 +70,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tw-elements/dist/plugin')],
 };
