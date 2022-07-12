@@ -31,7 +31,11 @@ Pet.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    owner_id: {
+    pet_picture: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+   user_id: {
       references: {
         type: DataTypes.INTEGER,
         model: 'user',
