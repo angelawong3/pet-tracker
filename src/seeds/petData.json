@@ -1,0 +1,20 @@
+[
+    {
+        "pet_name": "Murphy",
+         "pet_gender": "Male",
+         "birth_date": "05-03-2022",
+         "pet_weight":"45",
+         "next_appointment": "20-08-2022",
+         "owner_id": 1
+},
+{
+    "pet_name": "Billy",
+     "pet_gender": "Male",
+     "birth_date": "08-10-2018",
+     "pet_weight":"75",
+     "next_appointment": "22-08-2022",
+     "owner_id": 1
+}
+
+  ]
+  
