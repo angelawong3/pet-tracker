@@ -1,21 +1,20 @@
 [
-    {
-        "pet_name": "Murphy",
-         "pet_gender": "Male",
-         "birth_date": "05-03-2022",
-         "pet_weight":"45",
-         "next_appointment": "20-08-2022",
-         "pet_picture": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg",
-        
-},
-{
+  {
+    "pet_name": "Murphy",
+    "pet_gender": "Male",
+    "birth_date": "2022-03-05 00:00:00",
+    "pet_weight": "45",
+    "next_appointment": "2022-08-20 00:00:00",
+    "pet_picture": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg",
+    "owner_id": 1
+  },
+  {
     "pet_name": "Billy",
-     "pet_gender": "Male",
-     "birth_date": "08-10-2018",
-     "pet_weight":"75",
-     "next_appointment": "22-08-2022",
-     "pet_picture": "https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg",
-} 
-
-  ]
-  
+    "pet_gender": "Male",
+    "birth_date": "2019-10-08 00:00:00",
+    "pet_weight": "75",
+    "next_appointment": "2022-08-22 00:00:00",
+    "pet_picture": "https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg",
+    "owner_id": 1
+  }
+]
