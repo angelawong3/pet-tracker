@@ -12,10 +12,9 @@
     <title>Dashboard</title>
   </head>
   <body class="h-screen">
-    <!-- Container for demo purpose -->
     <div class="h-full bg-gray-100 flex">
-      <!-- Public Nav Bar partial -->
       <section class="flex-1 flex flex-col">
+        <!-- private nav bar partial -->
         <nav
           class="relative w-full flex flex-wrap items-center justify-between py-4 bg-white text-gray-500 hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light"
         >
@@ -56,8 +55,8 @@
                 href="#"
               >
                 <img
-                  src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-                  style="height: 15px"
+                  src="./images/MVP-without-bg.png"
+                  style="height: 35px"
                   alt=""
                   loading="lazy"
                 />
@@ -232,15 +231,20 @@
           <section class="h-5/6 rounded">
             <div class="flex h-full">
               <!-- start of side nav bar -->
-              <div class="rounded w-60 h-full shadow-md bg-white px-1">
-                <div class="w-12 h-12">
+              <div class="w-60 h-full shadow-md bg-white px-1">
+                <!-- start of image container div -->
+                <div class="flex flex-col p-4 space-y-4">
                   <img
-                    class="rounded-full"
+                    class="rounded-full w-36 h-36 mx-auto"
                     src="https://source.unsplash.com/UtrE5DcgEyg/250x250"
                     alt=""
                     srcset=""
                   />
+                  <h2>Welcome Username!</h2>
+                  <hr />
                 </div>
+                <!-- end of image container div -->
+                <!-- start of side button links -->
                 <ul>
                   <li>
                     <a
@@ -248,7 +252,9 @@
                       href="#!"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      >Sidenav link 1</a
+                    >
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
+                      Overview</a
                     >
                   </li>
                   <li>
@@ -257,7 +263,8 @@
                       href="#!"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      >Sidenav link 2</a
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
+                      Stats</a
                     >
                   </li>
                   <li>
@@ -266,18 +273,29 @@
                       href="#!"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      >Sidenav link 2</a
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
+                      Gallery</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="#!"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Settings</a
                     >
                   </li>
                 </ul>
+                <!-- end of side button links -->
               </div>
               <!-- end of side nav bar -->
+              <!-- start of overview section container -->
               <div class="w-full bg-gray-100">Hello</div>
             </div>
           </section>
         </div>
       </section>
-      <!-- Section: Design Block -->
     </div>
     <!-- Footer Section -->
     <footer class="pt-10 px-4">
@@ -380,7 +398,6 @@
         &copy Team Express
       </div>
     </footer>
-    <!-- Container for demo purpose -->
     <script src="/node_modules/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
