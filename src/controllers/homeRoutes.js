@@ -4,10 +4,10 @@ const { Pet, User } = require('../models');
 // const withAuth = require('../middlewares/auth');
 
 // get all posts
-router.get('/', async (req, res) => {});
-
-// get one post by its id, withAuth later
-router.get('/post/:id', async (req, res) => {});
+router.get('/', async (req, res) => {
+  res.send("You've reached the home page");
+  // swap for res.render when handlebars is configured
+});
 
 // lognin route
 router.get('/login', (req, res) => {
