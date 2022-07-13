@@ -22,6 +22,7 @@ Pet.init(
     birth_date: {
       type: DataTypes.DATE,
       allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     pet_weight: {
       type: DataTypes.INTEGER,
