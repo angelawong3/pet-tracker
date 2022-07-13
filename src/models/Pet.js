@@ -31,9 +31,13 @@ Pet.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
+    pet_picture: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     owner_id: {
+      type: DataTypes.INTEGER,
       references: {
-        type: DataTypes.INTEGER,
         model: 'user',
         key: 'id',
       },
@@ -41,16 +45,16 @@ Pet.init(
   },
   {
     // do we need the hooks here?
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.email = await newUserData.email.toLowerCase();
-        return newUserData;
-      },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.email = await updatedUserData.email.toLowerCase();
-        return updatedUserData;
-      },
-    },
+    // hooks: {
+    //   beforeCreate: async (newUserData) => {
+    //     newUserData.email = await newUserData.email.toLowerCase();
+    //     return newUserData;
+    //   },
+    //   beforeUpdate: async (updatedUserData) => {
+    //     updatedUserData.email = await updatedUserData.email.toLowerCase();
+    //     return updatedUserData;
+    //   },
+    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,
