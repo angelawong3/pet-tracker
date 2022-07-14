@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
       res.json(newUserData);
     });
   } catch (err) {
-    res.status(400).json(err);
+    res.status(400).json({ message: 'Cannot sign up, please try again!' });
   }
 });
 
