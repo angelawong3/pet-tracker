@@ -21,6 +21,7 @@ router.post('/', async (req, res) => {
       res.json(newUserData);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json({ message: 'Cannot sign up, please try again!' });
   }
 });
@@ -49,13 +50,14 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      //   req.session.user_id = userData.id;
+      req.session.user_id = userData.id;
       req.session.owner_name = userData.owner_name;
       req.session.logged_in = true;
 
       res.json({ userData, message: 'You are now logged in!' });
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
