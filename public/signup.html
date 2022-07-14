@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +10,98 @@
     <!-- Tailwind css CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-    <div class="flex justify-center items-center h-screen bg-slate-200">
+<body class="h-screen">
+    <!-- Container for demo purpose -->
+    <div class="h-full bg-gray-100 flex">
+      <!-- Public Nav Bar partial -->
+      <section class="flex-1 flex flex-col">
+        <nav
+          class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between"
+        >
+          <div class="px-6 w-full flex flex-wrap items-center justify-between">
+            <div class="flex items-center">
+              <button
+                class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContentY"
+                aria-controls="navbarSupportedContentY"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fa-solid fa-paw-simple"></i>
+              </button>
+              <a class="navbar-brand text-blue-600" href="#!">
+                <i class="fa-solid fa-paw fa-lg"></i
+              ></a>
+            </div>
+            <div
+              class="navbar-collapse collapse grow items-center"
+              id="navbarSupportedContentY"
+            >
+              <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
+                <li class="nav-item">
+                  <a
+                    class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                    href="#!"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    >Dashboard</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                    href="#!"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    >Team</a
+                  >
+                </li>
+                <li class="nav-item mb-2 lg:mb-0">
+                  <a
+                    class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                    href="#!"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    >Projects</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="flex items-center items-center lg:ml-auto">
+              <button
+                type="button"
+                class="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                Login
+              </button>
+              <button
+                type="button"
+                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                Sign up
+              </button>
+            </div>
+          </div>
+        </nav>
+        <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
+        <div
+          class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat"
+          style="
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+              ),
+              url('https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+          "
+        >
+    <div class="flex justify-center items-center h-screen">
         <div id="form" class="block bg-slate-50 p-6 rounded-xl shodow-md shadow-slate-300 w-90">
             <form action="">
                 <h2 class="text-blue-700 text-3xl font-semibold my-4">Register</h2>
@@ -43,6 +133,27 @@
                 <label for="confirmPassword" class="text-sm">Confirm Password</label><br>
                 <input type="password" name="" id="confirmPassword"
                     class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">
+                          Profile photo
+                        </label>
+                        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                          <div class="space-y-1 text-center">
+                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="True">
+                              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="flex text-sm text-gray-600">
+                              <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                <span>Upload a file</span>
+                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                              </label>
+                              <p class="pl-1">or drag and drop</p>
+                            </div>
+                            <p class="text-xs text-gray-500">
+                              PNG, JPG, GIF up to 10MB
+                            </p>
+                          </div>
+                        </div>
                 <!-- radio buttons for gender -->
                 <div id="gender" class="text-sm mb-2">
                     <p class="mt-2">Gender</p>
@@ -57,3 +168,6 @@
             </form>
         </div>
     </div>
+</body>
+
+</html>
