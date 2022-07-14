@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css",
     "watch": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css --watch",
-    "start": "node src/server.js",
+    "start": "npm run build && node src/server.js",
     "seed": "node src/seeds/seed.js",
     "prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
     "lint": "eslint \"**/*.js\"",

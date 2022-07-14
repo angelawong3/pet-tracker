@@ -231,8 +231,7 @@
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
                     >
-                      <i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
-                      Overview</a
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>Overview</a
                     >
                   </li>
                   <li>
@@ -241,8 +240,7 @@
                       href="#!"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
-                      Stats</a
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Stats</a
                     >
                   </li>
                   <li>
@@ -251,8 +249,7 @@
                       href="#!"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
-                      Gallery</a
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Gallery</a
                     >
                   </li>
                   <li>
@@ -269,7 +266,7 @@
               </div>
               <!-- end of side nav bar -->
               <!-- start of overview section container, click on side nav link -> render partial for overview/stats/gallery?-->
-              <div class="w-full bg-gray-100 p-6">
+              <div class="w-full bg-gray-100">
                 <div>
                   <div class="space-y-4">
                     <!--start of all pet cards container -->
@@ -277,7 +274,7 @@
                       <!-- start of pet 1 card -->
                       <div class="flex justify-center w-full">
                         <div
-                          class="rounded-lg shadow-lg bg-white w-full min-h-screen"
+                          class="rounded-lg shadow-lg bg-blue-100 w-full min-h-screen"
                         >
                           <a href="#!">
                             <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
@@ -287,14 +284,61 @@
                               alt=""
                             />
                           </a>
-                          <div class="p-6 flex flex-col items-center">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">
-                              Dog 1
+                          <div class="p-6 flex flex-col items-center mx-auto w-3/4 bg-white rounded-lg space-y-6">
+                            <h5 class="text-gray-900 text-4xl font-bold mb-2">
+                              Lucky
                             </h5>
-                            <p class="text-gray-700 text-base mb-4">
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </p>
+                            <div class="tables-container flex w-full">
+                              <!-- start of table -->
+                              <div class="w-full mx-auto">
+                                <div class="mx-auto">
+                                  <img
+                                    class="mx-auto my-2"
+                                    src="http://openweathermap.org/img/w/${icon}.png"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="mx-auto grid grid-cols-1 p-4">
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                    >
+                                      Pet Name
+                                    </div>
+                                    <div class="border p-3 text-center">${temp.day}C</div>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                    >
+                                      Pet Breed
+                                    </div>
+                                    <div class="border p-3 text-center">${humidity}</div>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                    >
+                                      Date of Birth
+                                    </div>
+                                    <div class="border p-3 text-center">${wind_speed}MPH</div>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                    >
+                                      Gender
+                                    </div>
+                                    <div class="border p-3">
+                                      <span class="p-3 text-center text-white ${getUviClassName(uvi)}">${uvi}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- end of 2nd table -->
+                            </div>
+                          </div>
+                            <!-- end of table-->
                           </div>
                         </div>
                       </div>
