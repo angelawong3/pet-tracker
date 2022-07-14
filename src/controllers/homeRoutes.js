@@ -5,20 +5,35 @@ const { Pet, User } = require('../models');
 
 // get all posts
 router.get('/', async (req, res) => {
-  res.send("You've reached the home page");
+  res.render('homepage');
   // swap for res.render when handlebars is configured
 });
 
-// lognin route
+// dashboard route
+router.get('/', async (req, res) => {
+  res.render('dashboard', {
+    logged_in: req.session.logged_in,
+  });
+});
+
+// login route
 router.get('/login', (req, res) => {
-  res.send("You've reached the login page");
-  // swap for res.render when handlebars is configured
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('login');
 });
 
 // signup route
 router.get('/signup', (req, res) => {
-  res.send("you've reached the sign up page");
-  // swap for res.render when handlebars is configured
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup');
 });
 
 module.exports = router;
