@@ -1,6 +1,7 @@
 [
   {
     "pet_name": "Murphy",
+    "pet_breed": "Cockapoo",
     "pet_gender": "Male",
     "birth_date": "2022-03-05 00:00:00",
     "pet_weight": 45,
@@ -10,11 +11,32 @@
   },
   {
     "pet_name": "Billy",
+    "pet_breed": "Spaniel",
     "pet_gender": "Male",
     "birth_date": "2019-10-08 00:00:00",
     "pet_weight": 75,
     "next_appointment": "2022-08-22 00:00:00",
     "pet_picture": "https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_4x3.jpg",
     "owner_id": 1
+  },
+  {
+    "pet_name": "Lily",
+    "pet_breed": "Golden-Retriever",
+    "pet_gender": "Female",
+    "birth_date": "2016-12-22 00:00:00",
+    "pet_weight": 89,
+    "next_appointment": "2022-12-22 00:00:00",
+    "pet_picture": "https://www.prestigeanimalhospital.com/sites/default/files/styles/large/public/golden-retriever-dog-breed-info.jpg?itok=scGfz-nI",
+    "owner_id": 2
+  },
+  {
+    "pet_name": "Maisie",
+    "pet_breed": "French-Bulldog",
+    "pet_gender": "Female",
+    "birth_date": "2019-10-08 00:00:00",
+    "pet_weight": 45,
+    "next_appointment": "2018-09-12 00:00:00",
+    "pet_picture": "https://i.guim.co.uk/img/media/38b9433aa08dc7ebeaf74405b24f19f7be0078c7/0_100_3000_1801/master/3000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=78f3476aebe0ffd1bc5cfbc6e2ae16a2",
+    "owner_id": 3
   }
 ]

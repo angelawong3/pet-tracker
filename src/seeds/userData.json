@@ -3,6 +3,16 @@
       "owner_name": "Alice", 
       "email": "alicebryer@icloud.com",
       "password": "Murphy12345."
-    }
+    },
+    {
+      "owner_name": "Harry", 
+      "email": "test@test.com",
+      "password": "password123."
+    },
+    {
+      "owner_name": "Lucy", 
+      "email": "lucy@icloud.com",
+      "password": "password123."
+    },
 ]
   
