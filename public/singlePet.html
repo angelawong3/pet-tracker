@@ -207,9 +207,9 @@
         >
           <!-- dashboard section container -->
           <section class="h-full rounded">
-            <div class="flex h-full">
+            <div class="flex h-full flex-col md:flex-row">
               <!-- start of side nav bar -->
-              <div class="w-60 h-full shadow-md bg-white px-1">
+              <div class="w-full md:w-60 h-full shadow-md bg-white px-1">
                 <!-- start of image container div -->
                 <div class="flex flex-col p-4 space-y-4">
                   <img
@@ -274,7 +274,7 @@
                       <!-- start of pet 1 card -->
                       <div class="flex justify-center w-full">
                         <div
-                          class="rounded-lg shadow-lg bg-blue-100 w-full min-h-screen"
+                          class=" shadow-lg bg-blue-600 w-full min-h-screen"
                         >
                           <a href="#!">
                             <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
@@ -284,11 +284,11 @@
                               alt=""
                             />
                           </a>
-                          <div class="p-6 flex flex-col items-center mx-auto w-3/4 bg-white rounded-lg space-y-6">
+                          <div class="p-6 flex flex-col items-center mx-auto w-full md:w-3/4 bg-white rounded-lg space-y-6">
                             <h5 class="text-gray-900 text-4xl font-bold mb-2">
                               Lucky
                             </h5>
-                            <div class="tables-container flex w-full">
+                            <div class="tables-container flex w-full md:w-3/4">
                               <!-- start of table -->
                               <div class="w-full mx-auto">
                                 <div class="mx-auto">
@@ -301,7 +301,7 @@
                                 <div class="mx-auto grid grid-cols-1 p-4">
                                   <div class="">
                                     <div
-                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
                                     >
                                       Pet Name
                                     </div>
@@ -309,7 +309,7 @@
                                   </div>
                                   <div class="">
                                     <div
-                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
                                     >
                                       Pet Breed
                                     </div>
@@ -317,7 +317,7 @@
                                   </div>
                                   <div class="">
                                     <div
-                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
                                     >
                                       Date of Birth
                                     </div>
@@ -325,13 +325,45 @@
                                   </div>
                                   <div class="">
                                     <div
-                                      class="border p-3 text-center bg-rich-black-fogra-29 text-white font-semibold"
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
                                     >
                                       Gender
                                     </div>
                                     <div class="border p-3">
                                       <span class="p-3 text-center text-white ${getUviClassName(uvi)}">${uvi}</span>
                                     </div>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
+                                    >
+                                      Pet Breed
+                                    </div>
+                                    <div class="border p-3 text-center">${humidity}</div>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
+                                    >
+                                      Pet Breed
+                                    </div>
+                                    <div class="border p-3 text-center">${humidity}</div>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
+                                    >
+                                      Pet Breed
+                                    </div>
+                                    <div class="border p-3 text-center">${humidity}</div>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-blue-300 text-white font-semibold"
+                                    >
+                                      Pet Breed
+                                    </div>
+                                    <div class="border p-3 text-center">${humidity}</div>
                                   </div>
                                 </div>
                               </div>
