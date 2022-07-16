@@ -3,7 +3,7 @@ const { Pet, User } = require('../models');
 // Import the custom middleware
 // const withAuth = require('../middlewares/auth');
 
-// get all posts
+// get homepage
 router.get('/', async (req, res) => {
   res.render('homepage');
   // swap for res.render when handlebars is configured
