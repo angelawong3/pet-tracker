@@ -16,9 +16,9 @@ Pet.init(
       allowNull: false,
     },
     pet_breed: {
-        type: DataTypes.STRING, 
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     pet_gender: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -40,7 +40,7 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    owner_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
