@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/489fc29660.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>Login</title>
   </head>
   <body class="h-screen">
     <!-- Container for demo purpose -->
@@ -17,10 +17,11 @@
       <!-- Public Nav Bar partial -->
       <section class="flex-1 flex flex-col">
         <nav
-          class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between"
+          class="navbar navbar-expand-lg shadow-md py-4 bg-white relative flex items-center w-full justify-between"
         >
           <div class="px-6 w-full flex flex-wrap items-center justify-between">
-            <div class="flex items-center">
+            <div class="flex items-center mr-3">
+              <!-- hamburger menu smaller vw -->
               <button
                 class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
                 type="button"
@@ -33,21 +34,21 @@
                 <i class="fa-solid fa-paw-simple"></i>
               </button>
               <a class="navbar-brand text-blue-600" href="#!">
-                <i class="fa-solid fa-paw fa-lg"></i
-              ></a>
+                <img style="height: 40px" src="./images/MVP-blue-bg.png" alt=""
+              /></a>
             </div>
             <div
               class="navbar-collapse collapse grow items-center"
               id="navbarSupportedContentY"
             >
-              <ul class="navbar-nav mr-auto lg:flex lg:flex-row">
+              <ul class="navbar-nav mr-auto lg:flex lg:flex-row space-x-4">
                 <li class="nav-item">
                   <a
                     class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
                     href="#!"
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
-                    >Dashboard</a
+                    >About</a
                   >
                 </li>
                 <li class="nav-item">
@@ -70,7 +71,7 @@
                 </li>
               </ul>
             </div>
-            <div class="flex items-center items-center lg:ml-auto">
+            <div class="flex items-center lg:ml-auto">
               <button
                 type="button"
                 class="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out"
@@ -90,7 +91,6 @@
             </div>
           </div>
         </nav>
-
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
           class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat"
@@ -103,7 +103,7 @@
           "
         >
           <div
-            class="flex justify-right items-right flex-wrap g-6 p-10 text-gray-500"
+            class="flex justify-center items-center flex-wrap g-6 p-10 text-gray-500"
           >
             <div class="xl:w-10/12">
               <div class="block bg-white shadow-lg rounded-lg">
@@ -129,7 +129,7 @@
                           <input
                             type="password"
                             class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                            id="exampleFormControlInput1"
+                            id="exampleFormControlInput2"
                             placeholder="Password"
                           />
                         </div>
@@ -186,11 +186,15 @@
         class="container flex flex-col justify-between space-y-8 lg:space-y-0 mx-auto my-8 lg:flex-row lg-space-y-0"
       >
         <div class="lg:w-1/3">
-          <a href="" class="flex justify-center">
-            <div class="flex w-12 h-12">
-              <i class="fa-solid fa-paw-simple"></i>
+          <a href="" class="flex flex-col justify-center items-center">
+            <div class="flex w-40 h-40">
+              <img
+                class="w-36 h-36"
+                src="/public/images/MVP-blue-bg.png"
+                alt=""
+              />
             </div>
-            <!-- prime properties instead div block el use span el -->
+            <!-- mvp logo instead div block el use span el -->
             <span class="self-center font-semibold text-blue-600 text-2xl"
               >My Valuable Pet</span
             >

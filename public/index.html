@@ -9,89 +9,90 @@
       src="https://kit.fontawesome.com/489fc29660.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>Homepage</title>
   </head>
   <body class="h-screen">
-    <div class="h-full bg-gray-100 flex">
+    <div class="h-full bg-gray-100 flex flex-col">
+      <nav
+        class="navbar navbar-expand-lg shadow-md py-4 bg-white relative flex items-center w-full justify-between"
+      >
+        <div class="px-6 w-full flex flex-wrap items-center justify-between">
+          <div class="flex items-center mr-3">
+            <!-- hamburger menu at smaller vw -->
+            <button
+              class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContentY"
+              aria-controls="navbarSupportedContentY"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-paw-simple"></i>
+            </button>
+            <a class="navbar-brand text-blue-600" href="#!">
+              <img
+                style="height: 40px"
+                src="/public/images/MVP-blue-bg.png"
+                alt=""
+            /></a>
+          </div>
+          <div
+            class="navbar-collapse collapse grow items-center"
+            id="navbarSupportedContentY"
+          >
+            <ul class="navbar-nav mr-auto lg:flex lg:flex-row space-x-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item mb-2 lg:mb-0">
+                <a
+                  class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                  >Projects</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center lg:ml-auto">
+            <button
+              type="button"
+              class="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+      </nav>
       <!-- Public Nav Bar partial -->
       <section class="flex-1 flex flex-col">
-        <nav
-          class="navbar navbar-expand-lg shadow-md py-4 bg-white relative flex items-center w-full justify-between"
-        >
-          <div class="px-6 w-full flex flex-wrap items-center justify-between">
-            <div class="flex items-center mr-3">
-              <button
-                class="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContentY"
-                aria-controls="navbarSupportedContentY"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <i class="fa-solid fa-paw-simple"></i>
-              </button>
-              <a class="navbar-brand text-blue-600" href="#!">
-                <img
-                  style="height: 35px"
-                  src="./images/MVP-without-bg.png"
-                  alt=""
-              /></a>
-            </div>
-            <div
-              class="navbar-collapse collapse grow items-center"
-              id="navbarSupportedContentY"
-            >
-              <ul class="navbar-nav mr-auto lg:flex lg:flex-row space-x-4">
-                <li class="nav-item">
-                  <a
-                    class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
-                    href="#!"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                    >Dashboard</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
-                    href="#!"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                    >Team</a
-                  >
-                </li>
-                <li class="nav-item mb-2 lg:mb-0">
-                  <a
-                    class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out"
-                    href="#!"
-                    data-mdb-ripple="true"
-                    data-mdb-ripple-color="light"
-                    >Projects</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="flex items-center lg:ml-auto">
-              <button
-                type="button"
-                class="inline-block px-6 py-2.5 mr-2 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-                data-mdb-ripple-color="light"
-              >
-                Login
-              </button>
-              <button
-                type="button"
-                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-                data-mdb-ripple-color="light"
-              >
-                Sign up
-              </button>
-            </div>
-          </div>
-        </nav>
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
           class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat"
@@ -105,7 +106,7 @@
         >
           <div class="container mx-auto xl:px-32">
             <div class="lg:grid-cols-2 gap-12 flex items-center">
-              <div class="mt-12 lg:mt-0">
+              <div class="mt-12 lg:mt-0 md:w-1/2">
                 <h1
                   class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12 text-blue-500"
                 >
@@ -132,11 +133,15 @@
         class="container flex flex-col justify-between space-y-8 lg:space-y-0 mx-auto my-8 lg:flex-row lg-space-y-0"
       >
         <div class="lg:w-1/3">
-          <a href="" class="flex justify-center">
-            <div class="flex w-12 h-12">
-              <i class="fa-solid fa-paw-simple"></i>
+          <a href="" class="flex flex-col justify-center items-center">
+            <div class="flex w-40 h-40">
+              <img
+                class="w-36 h-36"
+                src="/public/images/MVP-blue-bg.png"
+                alt=""
+              />
             </div>
-            <!-- prime properties instead div block el use span el -->
+            <!-- mvp instead div block el use span el -->
             <span class="self-center font-semibold text-blue-600 text-2xl"
               >My Valuable Pet</span
             >
