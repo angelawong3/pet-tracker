@@ -20,6 +20,7 @@ router.get('/dashboard', async (req, res) => {
 
     res.render('dashboard', {
       pets,
+      // logged_in: req.session.logged_in
     });
   } catch (err) {
     res.redirect('login');
