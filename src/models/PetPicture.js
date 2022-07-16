@@ -10,7 +10,7 @@ PetPicture.init(
       allowNull: false,
       primaryKey: true,
     },
- 
+
     pet_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -18,7 +18,7 @@ PetPicture.init(
         key: 'id',
       },
     },
-  }
+  },
   {
     sequelize,
     timestamps: false,
