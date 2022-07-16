@@ -3,6 +3,8 @@ module.exports = {
     './public/*.html',
     './public/js/*.js',
     './node_modules/tw-elements/dist/js/**/*.js',
+    './views/*.handlebars',
+    './views/layouts/**/*.handlebars',
   ],
   theme: {
     screens: {
