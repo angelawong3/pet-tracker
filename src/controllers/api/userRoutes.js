@@ -7,20 +7,21 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const newUserData = await User.create({
-      owner_name: req.body.owner_name,
+      username: req.body.username,
       email: req.body.email,
       password: req.body.password,
     });
 
     req.session.save(() => {
-      req.session.owner_id = newUserData.id;
-      req.session.owner_name = newUserData.owner_name;
+      req.session.user_id = newUserData.id;
+      req.session.username = newUserData.username;
       req.session.email = newUserData.email;
       req.session.loggedIn = true;
 
       res.json(newUserData);
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json({ message: 'Cannot sign up, please try again!' });
   }
 });
@@ -29,7 +30,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({
-      where: { owner_name: req.body.owner_name },
+      where: { username: req.body.username },
     });
 
     if (!userData) {
@@ -49,13 +50,14 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      //   req.session.user_id = userData.id;
-      req.session.owner_name = userData.owner_name;
+      req.session.user_id = userData.id;
+      req.session.username = userData.username;
       req.session.logged_in = true;
 
       res.json({ userData, message: 'You are now logged in!' });
     });
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });

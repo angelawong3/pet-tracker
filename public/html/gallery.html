@@ -9,7 +9,7 @@
       src="https://kit.fontawesome.com/489fc29660.js"
       crossorigin="anonymous"
     ></script>
-    <title>Dashboard</title>
+    <title>Gallery</title>
   </head>
   <body class="min-h-screen">
     <div class="h-full bg-gray-100 flex">
@@ -21,6 +21,7 @@
           <div
             class="container-fluid w-full flex flex-wrap items-center justify-between px-6"
           >
+            <!-- hamburger menu at smaller vw -->
             <button
               class="navbar-toggler text-gray-500 border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"
               type="button"
@@ -55,8 +56,8 @@
                 href="#"
               >
                 <img
-                  src="./images/MVP-without-bg.png"
-                  style="height: 35px"
+                  src="./images/MVP-blue-bg.png"
+                  style="height: 40px"
                   alt=""
                   loading="lazy"
                 />
@@ -207,9 +208,9 @@
         >
           <!-- dashboard section container -->
           <section class="h-full rounded">
-            <div class="flex h-full">
+            <div class="flex h-full flex-col lg:flex-row">
               <!-- start of side nav bar -->
-              <div class="w-60 h-full shadow-md bg-white px-1">
+              <div class="w-full lg:w-60 h-full shadow-md bg-white px-1">
                 <!-- start of image container div -->
                 <div class="flex flex-col p-4 space-y-4">
                   <img
@@ -231,7 +232,7 @@
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
                     >
-                      <i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
                       Overview</a
                     >
                   </li>
@@ -241,8 +242,7 @@
                       href="#!"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
-                      Stats</a
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i> Stats</a
                     >
                   </li>
                   <li>
@@ -251,8 +251,7 @@
                       href="#!"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Lucky's
-                      Gallery</a
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i> Gallery</a
                     >
                   </li>
                   <li>
@@ -272,185 +271,188 @@
               <div class="w-full bg-gray-100 p-6">
                 <div>
                   <div class="space-y-4">
-                    <h1 class="font-bold text-2xl text-center">Overview</h1>
-                    <!--start of all pet cards container -->
-                    <div class="flex justify-center flex-wrap gap-6">
-                      <!-- start of pet 1 card -->
-                      <div class="flex justify-center">
-                        <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                          <a href="#!">
-                            <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
-                            <img
-                              class="rounded-t-lg"
-                              src="https://source.unsplash.com/N04FIfHhv_k/780x520"
-                              alt=""
-                            />
-                          </a>
-                          <div class="p-6 flex flex-col items-center">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">
-                              Dog 1
-                            </h5>
-                            <p class="text-gray-700 text-base mb-4">
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </p>
-                            <button
-                              type="button"
-                              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                            >
-                              View
-                            </button>
-                          </div>
+                    <h1 class="font-bold text-center text-2xl">Gallery</h1>
+                    <!--start of all gallery container -->
+                    <div class="flex justify-center flex-wrap gap-6 p-6">
+                      <div
+                        id="carouselExampleCaptions"
+                        class="carousel slide relative w-full"
+                        data-bs-ride="carousel"
+                      >
+                        <div
+                          class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4"
+                        >
+                          <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                          ></button>
+                          <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                          ></button>
+                          <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"
+                          ></button>
+                          <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="3"
+                            aria-label="Slide 4"
+                          ></button>
+                          <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="4"
+                            aria-label="Slide 5"
+                          ></button>
+                          <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="5"
+                            aria-label="Slide 6"
+                          ></button>
                         </div>
-                      </div>
-                      <!-- end of pet 1 card -->
-                      <!-- start of pet 2 card -->
-                      <div class="flex justify-center">
-                        <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                          <a href="#!">
-                            <!-- courtesy of Karsten Winegeart https://unsplash.com/photos/NE0XGVKTmcA -->
+
+                        <div
+                          class="carousel-inner relative w-full overflow-hidden"
+                        >
+                          <!-- start of carousel img container -->
+                          <div
+                            class="carousel-item active relative float-left w-full"
+                          >
                             <img
-                              class="rounded-t-lg"
-                              src="https://source.unsplash.com/NE0XGVKTmcA/780x520"
-                              alt=""
+                              src="https://source.unsplash.com/N04FIfHhv_k/1320x700"
+                              class="block w-full object-cover"
+                              alt="..."
                             />
-                          </a>
-                          <div class="p-6 flex flex-col items-center">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">
-                              Dog 2
-                            </h5>
-                            <p class="text-gray-700 text-base mb-4">
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </p>
-                            <button
-                              type="button"
-                              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            <div
+                              class="carousel-caption hidden md:block absolute text-center"
                             >
-                              View
-                            </button>
+                              <h5 class="text-xl">First slide label</h5>
+                              <p>
+                                Some representative placeholder content for the
+                                first slide.
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <!-- end of pet 2 card -->
-                      <!-- start of pet 3 card -->
-                      <div class="flex justify-center">
-                        <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                          <a href="#!">
-                            <!-- courtesy of Angel Luciano https://unsplash.com/photos/LATYeZyw88c -->
+                          <div class="carousel-item relative float-left w-full">
                             <img
-                              class="rounded-t-lg"
-                              src="https://source.unsplash.com/LATYeZyw88c/780x520"
-                              alt=""
+                              src="https://source.unsplash.com/NE0XGVKTmcA/1320x700"
+                              class="block w-full object-cover"
+                              alt="..."
                             />
-                          </a>
-                          <div class="p-6 flex flex-col items-center">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">
-                              Dog 3
-                            </h5>
-                            <p class="text-gray-700 text-base mb-4">
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </p>
-                            <button
-                              type="button"
-                              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            <div
+                              class="carousel-caption hidden md:block absolute text-center"
                             >
-                              View
-                            </button>
+                              <h5 class="text-xl">Second slide label</h5>
+                              <p>
+                                Some representative placeholder content for the
+                                second slide.
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <!-- end of pet 3 card -->
-                      <!-- start of pet 4 card -->
-                      <div class="flex justify-center">
-                        <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                          <a href="#!">
-                            <!-- courtesy of Joe Caione https://unsplash.com/photos/qO-PIF84Vxg -->
+                          <div class="carousel-item relative float-left w-full">
                             <img
-                              class="rounded-t-lg"
-                              src="https://source.unsplash.com/qO-PIF84Vxg/780x520"
-                              alt=""
+                              src="https://source.unsplash.com/LATYeZyw88c/1320x700"
+                              class="block w-full object-contain"
+                              alt="..."
                             />
-                          </a>
-                          <div class="p-6 flex flex-col items-center">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">
-                              Dog 4
-                            </h5>
-                            <p class="text-gray-700 text-base mb-4">
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </p>
-                            <button
-                              type="button"
-                              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            <div
+                              class="carousel-caption hidden md:block absolute text-center"
                             >
-                              View
-                            </button>
+                              <h5 class="text-xl">Third slide label</h5>
+                              <p>
+                                Some representative placeholder content for the
+                                third slide.
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <!-- end of pet 4 card -->
-                      <!-- start of pet 5 card -->
-                      <div class="flex justify-center">
-                        <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                          <a href="#!">
-                            <!-- courtesy of Karsten Winegeart https://unsplash.com/photos/5PVXkqt2s9k -->
+                          <div class="carousel-item relative float-left w-full">
                             <img
-                              class="rounded-t-lg"
-                              src="https://source.unsplash.com/5PVXkqt2s9k/780x520"
-                              alt=""
+                              src="https://source.unsplash.com/qO-PIF84Vxg/1320x700"
+                              class="block w-full object-cover"
+                              alt="..."
                             />
-                          </a>
-                          <div class="p-6 flex flex-col items-center">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">
-                              Dog 5
-                            </h5>
-                            <p class="text-gray-700 text-base mb-4">
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </p>
-                            <button
-                              type="button"
-                              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            <div
+                              class="carousel-caption hidden md:block absolute text-center"
                             >
-                              View
-                            </button>
+                              <h5 class="text-xl">fourth slide label</h5>
+                              <p>
+                                Some representative placeholder content for the
+                                fourth slide.
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <!-- end of pet 5 card -->
-                      <!-- start of pet 6 card -->
-                      <div class="flex justify-center">
-                        <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                          <a href="#!">
-                            <!-- courtesy of Karsten Winegeart https://unsplash.com/photos/tUCvnMOvXFQ-->
+                          <div class="carousel-item relative float-left w-full">
                             <img
-                              class="rounded-t-lg"
-                              src="https://source.unsplash.com/tUCvnMOvXFQ/780x520"
-                              alt=""
+                              src="https://source.unsplash.com/5PVXkqt2s9k/1320x700"
+                              class="block w-full object-cover"
+                              alt="..."
                             />
-                          </a>
-                          <div class="p-6 flex flex-col items-center">
-                            <h5 class="text-gray-900 text-xl font-medium mb-2">
-                              Dog 6
-                            </h5>
-                            <p class="text-gray-700 text-base mb-4">
-                              Some quick example text to build on the card title
-                              and make up the bulk of the card's content.
-                            </p>
-                            <button
-                              type="button"
-                              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            <div
+                              class="carousel-caption hidden md:block absolute text-center"
                             >
-                              View
-                            </button>
+                              <h5 class="text-xl">Fifth slide label</h5>
+                              <p>
+                                Some representative placeholder content for the
+                                Fifth slide.
+                              </p>
+                            </div>
                           </div>
+                          <div class="carousel-item relative float-left w-full">
+                            <img
+                              src="https://source.unsplash.com/tUCvnMOvXFQ/1320x700"
+                              class="block w-full object-cover"
+                              alt="..."
+                            />
+                            <div
+                              class="carousel-caption hidden md:block absolute text-center"
+                            >
+                              <h5 class="text-xl">Sixth slide label</h5>
+                              <p>
+                                Some representative placeholder content for the
+                                Sixth slide.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- end of carousel img container -->
                         </div>
+                        <button
+                          class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon inline-block bg-no-repeat"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon inline-block bg-no-repeat"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
                       </div>
-                      <!-- end of pet 6 card -->
                     </div>
-                    <!--end of all pet cards container -->
+                    <!--end of gallery container -->
                   </div>
                 </div>
               </div>
@@ -468,9 +470,13 @@
         class="container flex flex-col justify-between space-y-8 lg:space-y-0 mx-auto my-8 lg:flex-row lg-space-y-0"
       >
         <div class="lg:w-1/3">
-          <a href="" class="flex justify-center">
-            <div class="flex w-12 h-12">
-              <i class="fa-solid fa-paw-simple"></i>
+          <a href="" class="flex flex-col justify-center items-center">
+            <div class="flex w-40 h-40">
+              <img
+                class="w-36 h-36"
+                src="/public/images/MVP-blue-bg.png"
+                alt=""
+              />
             </div>
             <!-- prime properties instead div block el use span el -->
             <span class="self-center font-semibold text-blue-600 text-2xl"
@@ -561,6 +567,6 @@
         &copy Team Express
       </div>
     </footer>
-    <script src="/node_modules/tw-elements/dist/js/index.min.js"></script>
+    <script src="../../node_modules/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>

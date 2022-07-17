@@ -1,8 +1,10 @@
 module.exports = {
   content: [
-    './public/*.html',
+    //dev testing purposes for html files. delete 1st one below before live deployment
+    './public/**/*.html',
     './public/js/*.js',
     './node_modules/tw-elements/dist/js/**/*.js',
+    './views/**/*.handlebars',
   ],
   theme: {
     screens: {
