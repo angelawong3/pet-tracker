@@ -11,10 +11,11 @@
     ></script>
     <title>Signup</title>
   </head>
-  <body class="h-screen">
+  <body class="min-h-screen">
+    <!-- Container for demo purpose -->
     <div class="h-full bg-gray-100 flex">
       <!-- Public Nav Bar partial -->
-      <section class="flex-1 flex flex-col">
+      <section class="h-full flex-1 flex flex-col">
         <nav
           class="navbar navbar-expand-lg shadow-md py-4 bg-white relative flex items-center w-full justify-between"
         >
@@ -92,7 +93,7 @@
         </nav>
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
-          class="flex justify-center items-center px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat"
+          class="h-full px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat"
           style="
             background-image: linear-gradient(
                 rgba(0, 0, 0, 0.2),
@@ -101,64 +102,107 @@
               url('https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
           "
         >
-          <!-- start of register form -->
-          <div class="flex justify-center items-center flex-1">
-            <div
-              id="form"
-              class="block bg-slate-50 p-6 rounded-xl shodow-md shadow-slate-300 w-90"
-            >
-              <form action="">
-                <h2 class="text-blue-700 text-3xl font-semibold my-4">
-                  Register
-                </h2>
-                <!-- full name -->
-                <div id="fullName">
-                  <!-- username -->
-                  <div id="username">
-                    <label for="fname" class="text-sm">Username</label><br />
-                    <input
-                      type="text"
-                      name=""
-                      id="fname"
-                      class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
-                    />
+          <!-- start of login -->
+          <section class="h-full gradient-form">
+            <div class="py-12 px-6 h-full flex items-center justify-center">
+              <div
+                class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800"
+              >
+                <div class="xl:w-10/12">
+                  <div class="block bg-white shadow-lg rounded-lg">
+                    <div class="lg:flex lg:flex-wrap g-0">
+                      <div class="lg:w-6/12 px-4 md:px-0">
+                        <div class="md:p-12 md:mx-6">
+                          <div class="text-center">
+                            <img
+                              class="mx-auto w-36"
+                              src="./images/MVP-blue-bg.png"
+                              alt="logo"
+                            />
+                            <h4 class="text-xl font-semibold mt-1 mb-12 pb-1">
+                              Most Valuable Pet
+                            </h4>
+                          </div>
+                          <form>
+                            <p class="mb-4">Register your MVP account today!</p>
+                            <div class="mb-4">
+                              <input
+                                type="text"
+                                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="username"
+                                placeholder="Username"
+                              />
+                            </div>
+                            <div class="mb-4">
+                              <input
+                                type="text"
+                                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="email"
+                                placeholder="Email"
+                              />
+                            </div>
+                            <div class="mb-4">
+                              <input
+                                type="password"
+                                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="password"
+                                placeholder="Password"
+                              />
+                            </div>
+                            <div class="mb-4">
+                              <input
+                                type="password"
+                                class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                id="confirm-password"
+                                placeholder="Confirm Password"
+                              />
+                            </div>
+
+                            <div class="text-center pt-1 mb-12 pb-1">
+                              <button
+                                class="inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 bg-blue-600"
+                                type="button"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="light"
+                              >
+                                Register
+                              </button>
+                            </div>
+                            <div class="flex items-center justify-between pb-6">
+                              <p class="mb-0 mr-2">Already have an account?</p>
+                              <button
+                                type="button"
+                                class="inline-block px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+                                data-mdb-ripple="true"
+                                data-mdb-ripple-color="light"
+                              >
+                                Login
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div
+                        class="lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none"
+                      >
+                        <img
+                          class="lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none object-cover w-full h-full"
+                          src="https://images.unsplash.com/photo-1504595403659-9088ce801e29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <!-- email -->
-                <label for="email" class="text-sm">Email</label><br />
-                <input
-                  type="emial"
-                  name=""
-                  id="email"
-                  class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
-                />
-                <!-- password -->
-                <label for="password" class="text-sm">Password</label><br />
-                <input
-                  type="password"
-                  name=""
-                  id="password"
-                  class="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
-                />
-                <br /><br />
-                <!-- Sign up / submit button -->
-                <input
-                  type="submit"
-                  name=""
-                  id="signUp"
-                  class="bg-blue-700 w-full h-10 cursor-pointer text-white rounded-md hover:bg-blue-600 hover:outline outline-2 outline-blue-600 outline-offset-2 text-sm"
-                /><br />
-                <p class="text-xs my-2">
-                  Already have a account?
-                  <a href="#" class="text-blue-600">Login</a>
-                </p>
-              </form>
+              </div>
             </div>
-          </div>
-          <!-- end of register form -->
+          </section>
+          <!-- end of login -->
         </div>
       </section>
+
+      <!-- Section: Design Block -->
     </div>
     <!-- Footer Section -->
     <footer class="pt-10 px-4">
