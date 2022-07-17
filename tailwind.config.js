@@ -1,8 +1,9 @@
 module.exports = {
   content: [
-    './public/*.html',
+    // './public/**/*.html',
     './public/js/*.js',
     './node_modules/tw-elements/dist/js/**/*.js',
+    './views/**/*.handlebars',
   ],
   theme: {
     screens: {
