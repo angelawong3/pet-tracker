@@ -5,7 +5,9 @@ const { Pet, User } = require('../models');
 router.get('/', async (req, res) => {
   try {
     const petData = await Pet.findAll({
-      where: { user_id: req.session.user_id },
+      // where: { user_id: req.session.user_id },
+      // tested by hard coding user id:
+      where: { user_id: 3 },
       include: [User],
     });
     const pets = petData.map((pet) => pet.get({ plain: true }));
