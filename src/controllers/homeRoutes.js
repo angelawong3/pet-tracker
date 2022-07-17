@@ -1,24 +1,41 @@
 const router = require('express').Router();
 const { Pet, User } = require('../models');
-// Import the custom middleware
-// const withAuth = require('../middlewares/auth');
 
-// get all posts
+// TODO: Import the custom middleware const withAuth = require('../middlewares/auth');
+
+// get homepage
 router.get('/', async (req, res) => {
-  res.send("You've reached the home page");
-  // swap for res.render when handlebars is configured
+  res.render('homepage', { logged_in: req.session.logged_in });
 });
 
-// lognin route
+// login route
 router.get('/login', (req, res) => {
-  res.send("You've reached the login page");
-  // swap for res.render when handlebars is configured
+  if (req.session.logged_in) {
+    res.redirect('/dashboard', { logged_in: req.session.logged_in });
+    return;
+  }
+
+  res.render('login');
 });
 
 // signup route
 router.get('/signup', (req, res) => {
-  res.send("you've reached the sign up page");
-  // swap for res.render when handlebars is configured
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup');
+});
+
+// team route
+router.get('/team', (req, res) => {
+  res.render('team');
+});
+
+// about route
+router.get('/about', (req, res) => {
+  res.render('about');
 });
 
 module.exports = router;

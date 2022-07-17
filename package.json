@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css",
+    "buildtw": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css",
     "watch": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css --watch",
-    "start": "node src/server.js",
+    "start": "npm run buildtw && nodemon src/server.js",
     "seed": "node src/seeds/seed.js",
     "prepare": "husky install && chmod ug+x .husky/* && chmod ug+x .git/hooks/*",
     "lint": "eslint \"**/*.js\"",
@@ -19,9 +19,11 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.1.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.3",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5",
     "tw-elements": "^1.0.0-alpha12"

@@ -1,0 +1,173 @@
+        <!-- private nav bar partial -->
+    {{>privateNav}}
+
+    <div class=" bg-gray-100 flex">
+      <section class="flex-1 flex flex-col">
+        <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
+        <div
+          class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat flex flex-col justify-center h-min-screen"
+          style="
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+              ),
+              url('https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+          "
+        >
+          <!-- dashboard section container -->
+          <section class="h-full rounded">
+            <div class="flex h-full flex-col lg:flex-row">
+              <!-- start of side nav bar -->
+              <div class="w-full lg:w-60 h-full shadow-md bg-white px-1">
+                <!-- start of image container div -->
+                <div class="flex flex-col p-4 space-y-4">
+                  <img
+                    class="rounded-full w-50 h-28 mx-auto"
+                    src="/images/MVP-without-bg.png"
+                    alt=""
+                    srcset=""
+                  />
+                  <h2>Welcome to MVP! 🐶</h2>
+                  <hr />
+                </div>
+                <!-- end of image container div -->
+                <!-- start of side button links -->
+                <ul>
+                  <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="/dashboard/gallery"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                    >
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
+                      Gallery </a
+                    ></li>
+                                      <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="/dashboard/new"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                    >
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
+                      Add a new pet </a
+                    ></li>
+                </ul>
+                <!-- end of side button links -->
+              </div>
+              <!-- end of side nav bar -->
+              <!-- start of overview section container, click on side nav link -> render partial for overview/stats/gallery?-->
+              <div class="w-full bg-gray-100">
+                <div>
+                    <!--start of create pet container -->
+                    <div class="flex justify-center flex-wrap gap-6">
+                      <!-- start of pet 1 card -->
+                      <div class="flex justify-center w-full">
+                        <div
+                          class=" shadow-lg bg-gray-100 w-full min-h-screen"
+                        >
+                          <div class="p-6 flex flex-col items-center mx-auto w-full md:w-3/4 bg-white rounded-lg md:my-8">
+                            <h5 class="text-gray-900 text-4xl font-bold">Create a Pet Profile
+                            </h5>
+                          
+                            <div class="tables-container flex flex-col w-full lg:w-5/6">
+                            <input id="user_id" type="hidden" name="user_id" value={{user.id}} />
+
+                              <!-- start of table -->
+                              <form id="create-pet-form" class="flex flex-col justify-center items-center">
+                                  <div class="w-full mx-auto">
+                                    <div class="mx-auto grid grid-cols-1 p-4">
+                                      <div
+                                      class="border p-3 text-center bg-blue-600 text-white font-semibold"
+                                    >
+                                      Pet Info
+                                    </div>
+                                      <div class="">
+                                        <div
+                                          class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                        >
+                                          Pet Name
+                                        </div>
+                                        <input id="pet-name" type="text" class="border p-3 text-center w-full" placeholder="Enter Pet Name">
+                                      </div>
+                                      <div class="">
+                                        <div
+                                          class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                        >
+                                          Pet Photo
+                                        </div>
+                                        <input id="pet-photo" type="text" class="border p-3 text-center w-full" placeholder="Enter Photo URL">
+                                      </div>
+                                      <div class="">
+                                        <div
+                                          class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                        >
+                                          Pet Breed
+                                        </div>
+                                        <input id="pet-breed" type="text" class="border p-3 text-center w-full" placeholder="Enter Pet Breed">
+                                      </div>
+                                      <div class="">
+                                        <div
+                                          class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                        >
+                                          Date of Birth
+                                        </div>
+                                        <input id="pet-dob" type="text" class="border p-3 text-center w-full" placeholder="Enter Date of Birth (YYYY-MM-DD)">
+                                      </div>
+                                      <div class="">
+                                        <div
+                                          class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                        >Gender
+                                        </div>
+                                        <input id="pet-gender" type="text" class="border p-3 text-center w-full" placeholder="Enter Gender">
+                                      </div>
+                                      <div class="">
+                                        <div
+                                          class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                        >
+                                          Weight
+                                        </div>
+                                        <input id="pet-weight" type="text" class="border p-3 text-center w-full" placeholder="Enter Weight">
+                                      </div>
+                                      <div class="">
+                                        <div
+                                          class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                        >
+                                          Next Appointment
+                                        </div>
+                                        <input id="pet-nextappt" type="text" class="border p-3 text-center w-full" placeholder="Enter Next Appointment Date (YYYY-MM-DD)">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button
+                                  type="submit"
+                                  class="flex justify-center px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                                  data-mdb-ripple="true"
+                                  data-mdb-ripple-color="light"
+                                >
+                                  Create Pet
+                                </button>
+                              </form>
+                              <!-- end of 2nd table -->
+                            </div>
+                          </div>
+                            <!-- end of table-->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of pet 1 card -->
+                    <!--end of all pet cards container -->
+                  </div>
+                </div>
+              </div>
+          </section>
+              <!-- end of overview section container -->
+            </div>
+            </section>
+        </div>
+    <!-- Footer Section -->
+{{>footer}}
+
+<script src='/js/createPet.js'></script>
+
