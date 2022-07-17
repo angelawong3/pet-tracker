@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Pet, User } = require('../models');
-// Import the custom middleware
-// const withAuth = require('../middlewares/auth');
+
+// TODO: Import the custom middleware const withAuth = require('../middlewares/auth');
 
 // get homepage
 router.get('/', async (req, res) => {
