@@ -1,9 +1,194 @@
-{{! user able to create new pet here
-a form with the following questions
-    "pet_name"
-    "pet_breed"
-    "pet_gender"
-    "birth_date"
-    "pet_weight"
-    "next_appointment"
-    "pet_picture" (tell the user to input URL) }}
+{{! user can edit the pet info or del the pet here }}
+
+<section class='h-full rounded'>
+  <div class='flex h-full flex-col lg:flex-row'>
+    <!-- start of side nav bar -->
+    <div class='w-full lg:w-60 h-full shadow-md bg-white px-1'>
+      <!-- start of image container div -->
+      <div class='flex flex-col p-4 space-y-4'>
+        <img
+          class='rounded-full w-36 h-36 mx-auto'
+          src='https://mdbootstrap.com/img/new/avatars/2.jpg'
+          alt=''
+          srcset=''
+        />
+        <h2>Welcome Username!</h2>
+        <hr />
+      </div>
+      <!-- end of image container div -->
+      <!-- start of side button links -->
+      <ul>
+        <li>
+          <a
+            class='flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+            href='#!'
+            data-mdb-ripple='true'
+            data-mdb-ripple-color='dark'
+          >
+            <i class='fa-solid fa-paw fa-lg mr-2'></i>Overview</a>
+        </li>
+        <li>
+          <a
+            class='flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+            href='#!'
+            data-mdb-ripple='true'
+            data-mdb-ripple-color='dark'
+          ><i class='fa-solid fa-paw fa-lg mr-2'></i>Stats</a>
+        </li>
+        <li>
+          <a
+            class='flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+            href='#!'
+            data-mdb-ripple='true'
+            data-mdb-ripple-color='dark'
+          ><i class='fa-solid fa-paw fa-lg mr-2'></i>Gallery</a>
+        </li>
+        <li>
+          <a
+            class='flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out'
+            href='#!'
+            data-mdb-ripple='true'
+            data-mdb-ripple-color='dark'
+          ><i class='fa-solid fa-paw fa-lg mr-2'></i>Settings</a>
+        </li>
+      </ul>
+      <!-- end of side button links -->
+    </div>
+    <!-- end of side nav bar -->
+    <!-- start of overview section container, click on side nav link -> render partial for overview/stats/gallery?-->
+    <div class='w-full bg-gray-100'>
+      <div>
+        <!--start of create pet container -->
+        <div class='flex justify-center flex-wrap gap-6'>
+          <!-- start of pet 1 card -->
+          <div class='flex justify-center w-full'>
+            <div class='shadow-lg bg-gray-100 w-full min-h-screen'>
+
+              <div
+                class='p-6 flex flex-col items-center mx-auto w-full md:w-3/4 bg-white rounded-lg md:my-8'
+              >
+                <h5 class='text-gray-900 text-4xl font-bold'>
+                  Create a Pet Profile
+                </h5>
+
+                <div class='tables-container flex flex-col w-full lg:w-5/6'>
+                  <!-- start of table -->
+                  <form
+                    id='create-pet-form'
+                    class='flex flex-col justify-center items-center'
+                  >
+                    <div class='w-full mx-auto'>
+                      <div class='mx-auto grid grid-cols-1 p-4'>
+                        <div
+                          class='border p-3 text-center bg-blue-600 text-white font-semibold'
+                        >
+                          Pet Info
+                        </div>
+                        <div class=''>
+                          <div
+                            class='border p-3 text-center bg-gray-100 text-black font-semibold'
+                          >
+                            Pet Name
+                          </div>
+                          <input
+                            type='text'
+                            class='border p-3 text-center w-full'
+                            placeholder='Enter Pet Name'
+                          />
+                        </div>
+                        <div class=''>
+                          <div
+                            class='border p-3 text-center bg-gray-100 text-black font-semibold'
+                          >
+                            Pet Photo
+                          </div>
+                          <input
+                            type='text'
+                            class='border p-3 text-center w-full'
+                            placeholder='URL for the photo'
+                          />
+                        </div>
+                        <div class=''>
+                          <div
+                            class='border p-3 text-center bg-gray-100 text-black font-semibold'
+                          >
+                            Pet Breed
+                          </div>
+                          <input
+                            type='text'
+                            class='border p-3 text-center w-full'
+                            placeholder='Enter Pet Breed'
+                          />
+                        </div>
+                        <div class=''>
+                          <div
+                            class='border p-3 text-center bg-gray-100 text-black font-semibold'
+                          >
+                            Date of Birth
+                          </div>
+                          <input
+                            type='text'
+                            class='border p-3 text-center w-full'
+                            placeholder='Enter Date of Birth (YYYY-MM-DD)'
+                          />
+                        </div>
+                        <div class=''>
+                          <div
+                            class='border p-3 text-center bg-gray-100 text-black font-semibold'
+                          >
+                            Gender
+                          </div>
+                          <input
+                            type='text'
+                            class='border p-3 text-center w-full'
+                            placeholder='Enter Gender'
+                          />
+                        </div>
+                        <div class=''>
+                          <div
+                            class='border p-3 text-center bg-gray-100 text-black font-semibold'
+                          >
+                            Weight
+                          </div>
+                          <input
+                            type='text'
+                            class='border p-3 text-center w-full'
+                            placeholder='Enter Weight'
+                          />
+                        </div>
+                        <div class=''>
+                          <div
+                            class='border p-3 text-center bg-gray-100 text-black font-semibold'
+                          >
+                            Next Appointment
+                          </div>
+                          <input
+                            type='text'
+                            class='border p-3 text-center w-full'
+                            placeholder='Enter Next Appointmen Date (YYYY-MM-DD)'
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      type='button'
+                      class='flex justify-center px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out'
+                      data-mdb-ripple='true'
+                      data-mdb-ripple-color='light'
+                    >
+                      Create Pet
+                    </button>
+                  </form>
+                  <!-- end of 2nd table -->
+                </div>
+              </div>
+              <!-- end of table-->
+            </div>
+          </div>
+        </div>
+        <!-- end of pet 1 card -->
+        <!--end of all pet cards container -->
+      </div>
+    </div>
+  </div>
+</section>
