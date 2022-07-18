@@ -1,6 +1,5 @@
 // event handler for button click to save pet
 // to be updated
-
 const handleCreatePet = async (e) => {
   e.preventDefault();
 
@@ -22,16 +21,16 @@ const handleCreatePet = async (e) => {
     petNextappt
   ) {
     const payload = {
-      petName,
-      petPhoto,
-      petBreed,
-      petDob,
-      petGender,
-      petWeight,
-      petNextappt,
+      pet_name: petName,
+      pet_picture: petPhoto,
+      pet_breed: petBreed,
+      birth_date: petDob,
+      pet_gender: petGender,
+      pet_weight: petWeight,
+      next_appointment: petNextappt,
     };
 
-    const response = await fetch('/api/post', {
+    const response = await fetch('/api/pet', {
       method: 'POST',
       body: JSON.stringify({
         payload,
