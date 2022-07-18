@@ -92,3 +92,127 @@
     <!-- end of overview section container -->
   </div>
 </section>
+
+   <div class="h-full bg-gray-100 flex">
+      <section class="flex-1 flex flex-col">
+        <!-- private nav bar partial -->
+{{>privateNav}}
+        <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
+        <div
+          class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat flex flex-col justify-center h-min-screen"
+          style="
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+              ),
+              url('https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+          "
+        >
+          <!-- dashboard section container -->
+          <section class="h-full rounded">
+            <div class="flex h-full flex-col lg:flex-row">
+              <!-- start of side nav bar -->
+              <div class="w-full lg:w-60 h-full shadow-md bg-white px-1">
+                <!-- start of image container div -->
+                <div class="flex flex-col p-4 space-y-4">
+                  <img
+                    class="rounded-full w-36 h-36 mx-auto"
+                    src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                    alt=""
+                    srcset=""
+                  />
+                  <h2>Welcome Username!</h2>
+                  <hr />
+                </div>
+                <!-- end of image container div -->
+                <!-- start of side button links -->
+                <ul>
+                  <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="#!"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                    >
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
+                      Overview</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="#!"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i> Stats</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="#!"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i> Gallery</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="#!"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Settings</a
+                    >
+                  </li>
+                </ul>
+                <!-- end of side button links -->
+              </div>
+              <!-- end of side nav bar -->
+              <!-- start of overview section container, click on side nav link -> render partial for overview/stats/gallery?-->
+              <div class="w-full bg-gray-100 p-6">
+                <div>
+                  <div class="space-y-4">
+                    <h1 class="font-bold text-2xl text-center">Overview</h1>
+                    <!--start of all pet cards container -->
+                    <div class="flex justify-center flex-wrap gap-6">
+                      <!-- start of pet 1 card -->
+                          {{#each pets as |pet|}}
+                      <div class="flex justify-center">
+                        <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                          <a href='/dashboard/edit/{{id}}'>
+                            <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
+                            <img
+                              class="rounded-t-lg"
+                                src='{{pet_picture}}'
+                              alt=""
+                            />
+                          </a>
+                          <div class="p-6 flex flex-col items-center">
+                            <h5 class="text-gray-900 text-xl font-medium mb-2">{{pet_name}}
+                            </h5><a href="/dashboard/edit/{{id}}">
+                            <button
+                              type="button"
+                              class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            >
+                              View
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of pet 1 card -->
+                    </div>
+                    <!--end of all pet cards container -->
+                  </div>
+                </div>
+              </div>
+              <!-- end of overview section container -->
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <!-- Footer Section -->
+{{>footer}}
+
+
