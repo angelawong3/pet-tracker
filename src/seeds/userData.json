@@ -1,16 +1,16 @@
 [
   {
-    "owner_name": "Alice",
+    "username": "testing",
     "email": "alicebryer@icloud.com",
-    "password": "Murphy12345."
+    "password": "password"
   },
   {
-    "owner_name": "Harry",
+    "username": "Harry",
     "email": "test@test.com",
     "password": "password123."
   },
   {
-    "owner_name": "Lucy",
+    "username": "Lucy",
     "email": "lucy@icloud.com",
     "password": "password123."
   }
