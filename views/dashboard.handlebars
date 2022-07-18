@@ -1,7 +1,7 @@
 <div class="h-full bg-gray-100 flex">
+          <!-- private nav bar partial -->
+        {{>privateNav}}
       <section class="flex-1 flex flex-col">
-        <!-- private nav bar partial -->
-{{>privateNav}}
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
           class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat flex flex-col justify-center h-min-screen"
@@ -26,7 +26,7 @@
                     alt=""
                     srcset=""
                   />
-                  <h2>Welcome Username!</h2>
+                  <h2>Welcome, {{username}}!</h2>
                   <hr />
                 </div>
                 <!-- end of image container div -->
@@ -40,36 +40,8 @@
                       data-mdb-ripple-color="dark"
                     >
                       <i class="fa-solid fa-paw fa-lg mr-2"></i>
-                      Overview</a
+                      Your Pets: </a
                     >
-                  </li>
-                  <li>
-                    <a
-                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      href="#!"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i> Stats</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      href="#!"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i> Gallery</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      href="#!"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Settings</a
-                    >
-                  </li>
                 </ul>
                 <!-- end of side button links -->
               </div>
@@ -119,5 +91,3 @@
     </div>
     <!-- Footer Section -->
 {{>footer}}
-
-
