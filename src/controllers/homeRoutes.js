@@ -5,8 +5,7 @@ const { Pet, User } = require('../models');
 
 // get homepage
 router.get('/', async (req, res) => {
-  res.render('homepage');
-  // swap for res.render when handlebars is configured
+  res.render('homepage', { logged_in: req.session.logged_in });
 });
 
 // login route
