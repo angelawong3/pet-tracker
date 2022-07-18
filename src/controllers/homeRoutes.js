@@ -29,4 +29,14 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// team route
+router.get('/team', (req, res) => {
+  res.render('team');
+});
+
+// about route
+router.get('/about', (req, res) => {
+  res.render('about');
+});
+
 module.exports = router;
