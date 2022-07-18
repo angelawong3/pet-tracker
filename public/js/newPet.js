@@ -1,8 +1,8 @@
 // event handler for button click to save pet
 // to be updated
 
-const newFormHandler = async (event) => {
-  event.preventDefault();
+const handleCreatePet = async (e) => {
+  e.preventDefault();
 
   const postTitle = document.querySelector('#post-title').value.trim();
   const postContent = document.querySelector('#post-content').value.trim();
@@ -25,5 +25,5 @@ const newFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-post-form')
-  .addEventListener('submit', newFormHandler);
+  .querySelector('#create-pet-form')
+  .addEventListener('submit', handleCreatePet);
