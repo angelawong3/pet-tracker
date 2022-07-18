@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({
-      where: { owner_name: req.body.owner_name },
+      where: { username: req.body.username },
     });
 
     if (!userData) {
@@ -51,7 +51,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.owner_name = userData.owner_name;
+      req.session.username = userData.username;
       req.session.logged_in = true;
 
       res.json({ userData, message: 'You are now logged in!' });
