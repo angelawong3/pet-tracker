@@ -9,10 +9,12 @@ const { Pet } = require('../../models');
 // tested, work on Postman
 router.post('/', async (req, res) => {
   try {
+    console.log(req.body);
     const newPet = await Pet.create({
+      user_id: req.session.userId,
       ...req.body,
     });
-    res.status(200).json(newPet);
+    return res.status(200).json(newPet);
   } catch (err) {
     res.status(400).json(err);
   }
