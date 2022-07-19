@@ -8,11 +8,12 @@ const { Pet } = require('../../models');
 // POST request to add a new pet, withAuth later
 // tested, work on Postman
 router.post('/', async (req, res) => {
+  const body = req.body;
+  console.log(body);
+
   try {
-    console.log(req.body);
     const newPet = await Pet.create({
-      user_id: req.session.userId,
-      ...req.body,
+      ...body,
     });
     return res.status(200).json(newPet);
   } catch (err) {
