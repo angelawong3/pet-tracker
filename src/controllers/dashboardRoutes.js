@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 // "/dashboard/new"
 // to create new pet
 router.get('/new', (req, res) => {
-  res.render('createPet', {});
+  res.render('createPet');
 });
 
 // to edit an existing pet
