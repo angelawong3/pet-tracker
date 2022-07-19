@@ -12,7 +12,8 @@ editBtn.addEventListener('click', () => {
 });
 
 doneBtn.addEventListener('click', async () => {
-  const user_id = 1;
+  // TODO: hard coded, need to figure how to get id
+  const user_id = 17;
   const petName = document.querySelector('#pet-name').value;
   const petBreed = document.querySelector('#pet-breed').value;
   const petDob = document.querySelector('#pet-dob').value;
@@ -25,7 +26,7 @@ doneBtn.addEventListener('click', async () => {
     el.contentEditable = false;
     el.style.backgroundColor = '#ffffff';
   });
-
+  console.log(petName);
   const payload = {
     user_id: user_id,
     pet_name: petName,
@@ -36,7 +37,7 @@ doneBtn.addEventListener('click', async () => {
     next_appointment: petNextappt,
   };
 
-  const response = await fetch(`/api/post/${postId}`, {
+  const response = await fetch(`/api/pet/${user_id}`, {
     method: 'PUT',
     body: JSON.stringify(payload),
     headers: {
