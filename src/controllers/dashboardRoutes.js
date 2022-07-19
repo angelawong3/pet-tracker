@@ -24,6 +24,7 @@ router.get('/', async (req, res) => {
 // "/dashboard/new"
 // to create new pet
 router.get('/new', (req, res) => {
+  // return res.send(req.session.user_id);
   res.render('createPet');
 });
 
