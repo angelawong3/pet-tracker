@@ -4764,9 +4764,19 @@ textarea.form-control.is-invalid {
      object-fit: cover;
 }
 
-.object-fill {
-  -o-object-fit: fill;
-     object-fit: fill;
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.object-top {
+  -o-object-position: top;
+     object-position: top;
 }
 
 .p-4 {

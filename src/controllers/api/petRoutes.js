@@ -10,7 +10,6 @@ const { Pet } = require('../../models');
 router.post('/', async (req, res) => {
   const body = req.body;
   body.user_id = req.session.user_id;
-
   try {
     const newPet = await Pet.create({
       ...body,
