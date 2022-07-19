@@ -1,6 +1,6 @@
           <!-- private nav bar partial -->
         {{>privateNav}}
-<div class="h-full bg-gray-100 flex">
+<div class="bg-gray-100 flex">
       <section class="flex-1 flex flex-col">
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
@@ -67,23 +67,20 @@
                           {{#each pets as |pet|}}
                       <div class="flex justify-center">
                         <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                          <a href='/dashboard/edit/{{id}}'>
                             <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
                             <img
-                              class="rounded-t-lg h-130 w-195"
-                                src=`{{pet_picture}}`
+                              class="rounded-t-lg h-64 w-96 object-cover"
+                                src={{pet_picture}}
                               alt=""
                             />
-                          </a>
                           <div class="p-6 flex flex-col items-center">
                             <h5 class="text-gray-900 text-xl font-medium mb-2">{{pet_name}}
-                            </h5><a href="/dashboard/edit/{{id}}">
-                            <button
-                              type="button"
+                            </h5>
+                            <a href="/dashboard/edit/{{id}}"
                               class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                             >
                               View
-                            </button>
+                            </a>
                           </div>
                         </div>
                       </div>

@@ -4424,6 +4424,10 @@ textarea.form-control.is-invalid {
   height: 7rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -4450,6 +4454,10 @@ textarea.form-control.is-invalid {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .min-w-max {
@@ -4754,6 +4762,11 @@ textarea.form-control.is-invalid {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .p-4 {
