@@ -1,7 +1,3 @@
-// event handler for button click to save pet
-// to be updated
-const createPetForm = document.querySelector('#create-pet-form');
-
 const handleCreatePet = async (event) => {
   event.preventDefault();
 
@@ -23,12 +19,12 @@ const handleCreatePet = async (event) => {
   ) {
     const payload = {
       pet_name: petName,
-      pet_picture: petPhoto,
       pet_breed: petBreed,
-      birth_date: petDob,
       pet_gender: petGender,
+      birth_date: petDob,
       pet_weight: petWeight,
       next_appointment: petNextappt,
+      pet_picture: petPhoto,
     };
 
     const response = await fetch('/api/pet', {
@@ -38,9 +34,9 @@ const handleCreatePet = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-    const data = await response.json();
-    if (data.ok) {
-      document.location.replace('/dashboard');
+    console.log(response);
+    if (response.ok) {
+      document.location.assign('/dashboard');
     } else {
       alert('Failed to create post. Please try again');
     }
@@ -49,4 +45,6 @@ const handleCreatePet = async (event) => {
   }
 };
 
-createPetForm.addEventListener('submit', handleCreatePet);
+document
+  .querySelector('#create-pet-form')
+  .addEventListener('submit', handleCreatePet);
