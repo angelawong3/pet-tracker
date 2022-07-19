@@ -3,7 +3,6 @@ console.log('in createPet.js');
 const handleCreatePet = async (event) => {
   event.preventDefault();
 
-  const user_id = document.querySelector('#user_id').value;
   const petName = document.querySelector('#pet-name').value;
   const petPhoto = document.querySelector('#pet-photo').value;
   const petBreed = document.querySelector('#pet-breed').value;
@@ -21,9 +20,6 @@ const handleCreatePet = async (event) => {
     petNextappt
   ) {
     const payload = {
-      // hardcoded user_id can add pet successfully
-      // user_id: 1,
-      user_id: user_id,
       pet_name: petName,
       pet_breed: petBreed,
       pet_gender: petGender,
