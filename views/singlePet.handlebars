@@ -21,12 +21,12 @@
                 <!-- start of image container div -->
                 <div class="flex flex-col p-4 space-y-4">
                   <img
-                    class="rounded-full w-36 h-36 mx-auto"
-                    src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                    class="rounded-full w-50 h-28 mx-auto"
+                    src="/images/MVP-without-bg.png"
                     alt=""
                     srcset=""
                   />
-                  <h2>Welcome Username!</h2>
+                  <h2>Welcome to MVP! 🐶</h2>
                   <hr />
                 </div>
                 <!-- end of image container div -->
@@ -35,40 +35,23 @@
                   <li>
                     <a
                       class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      href="#!"
+                      href="/dashboard/gallery"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
                     >
-                      <i class="fa-solid fa-paw fa-lg mr-2"></i>Overview</a
-                    >
-                  </li>
-                  <li>
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
+                      Gallery </a
+                    ></li>
+                                      <li>
                     <a
                       class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      href="#!"
+                      href="/dashboard/new"
                       data-mdb-ripple="true"
                       data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Stats</a
                     >
-                  </li>
-                  <li>
-                    <a
-                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      href="#!"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Gallery</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
-                      href="#!"
-                      data-mdb-ripple="true"
-                      data-mdb-ripple-color="dark"
-                      ><i class="fa-solid fa-paw fa-lg mr-2"></i>Settings</a
-                    >
-                  </li>
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
+                      Add a new pet </a
+                    ></li>
                 </ul>
                 <!-- end of side button links -->
               </div>
@@ -83,34 +66,35 @@
                         <div
                           class=" shadow-lg bg-gray-100 w-full min-h-screen"
                         >
-                          <a href="#!">
+                          <a href="/dashboard/edit/{{pet.id}}">
+                          <input id="pet_id" type="hidden" name="pet_id" value={{pet.id}} />
                             <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
                             <img
                               class="rounded-full mx-auto p-6"
-                              src="https://source.unsplash.com/N04FIfHhv_k/300x300"
+                              src="{{pet.pet_picture}}"
                               alt=""
                             />
                           </a>
                           <div class="p-6 flex flex-col items-center mx-auto w-full md:w-3/4 bg-white rounded-lg mb-8">
                             <h5 class="text-gray-900 text-4xl font-bold mb-2">
-                              Lucky
+                              {{pet.pet_name}}
                             </h5>
                             <!-- start of notifications box -->
                             <div class="w-full flex flex-col items-center justify-center p-5">
                               <h5 class="border font-bold bg-blue-600 text-white p-3 text-left w-full lg:w-5/6 pl-6">
-                                Lucky's Notifications
+                                {{pet.pet_name}}'s Notification
                               </h5>
                               <div class="border w-full lg:w-5/6 ">
                                 <div
                                 class="border p-3 text-center"
                               >
-                                Lucky's Appointment is due 23/03/2022
+                                {{pet.pet_name}}'s Appointment is due {{format_date pet.next_appointment}}
                               </div>
-                              <div
+                              {{!-- <div
                               class="border p-3 text-center font-semi"
                             >
                               Lucky's Appointment is due 23/03/2022
-                            </div>
+                            </div> --}}
                               </div>
                             </div>
                             <!-- end of notifications box -->
@@ -131,7 +115,7 @@
                                     >
                                       Pet Name
                                     </div>
-                                    <p  id="pet-name" class="border p-3 text-center edit-field">Luck</p>
+                                    <p  id="pet-name" class="border p-3 text-center edit-field">{{pet.pet_name}}</p>
                                   </div>
                                   <div class="">
                                     <div
@@ -139,7 +123,7 @@
                                     >
                                       Pet Breed
                                     </div>
-                                    <p  id="pet-breed" class="border p-3 text-center edit-field">Golden Retriever</p>
+                                    <p  id="pet-breed" class="border p-3 text-center edit-field">{{pet.pet_breed}}</p>
                                   </div>
                                   <div class="">
                                     <div
@@ -147,14 +131,14 @@
                                     >
                                       Date of Birth
                                     </div>
-                                    <p  id="pet-dob" class="border p-3 text-center edit-field">07/03/2022</p>
+                                    <p  id="pet-dob" class="border p-3 text-center edit-field">{{format_date pet.birth_date}}</p>
                                   </div>
                                   <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >Gender
                                     </div>
-                                    <p  id="pet-gender" class="border p-3 text-center edit-field">Male</p>
+                                    <p  id="pet-gender" class="border p-3 text-center edit-field">{{pet.pet_gender}}</p>
                                   </div>
                                   <div class="">
                                     <div 
@@ -162,7 +146,7 @@
                                     >
                                       Weight
                                     </div>
-                                    <p id="pet-weight" class="border p-3 text-center edit-field">22 Pounds</p>
+                                    <p id="pet-weight" class="border p-3 text-center edit-field">{{pet.pet_weight}} Pounds</p>
                                   </div>
                                   <div class="">
                                     <div
@@ -170,7 +154,7 @@
                                     >
                                       Next Appointment
                                     </div>
-                                    <p id="pet-nextappt" class="border p-3 text-center edit-field">22/09/2022</p>
+                                    <p id="pet-nextappt" class="border p-3 text-center edit-field">{{format_date pet.next_appointment}}</p>
                                   </div>
                                 </div>
                               </div>

@@ -1,3 +1,5 @@
+console.log('in singlePet.js');
+
 const editFields = document.querySelectorAll('.edit-field');
 const editBtn = document.querySelector('#edit-btn');
 const doneBtn = document.querySelector('#done-btn');
@@ -11,9 +13,12 @@ editBtn.addEventListener('click', () => {
   });
 });
 
+console.log('%%%%%%%%%%%%%%%');
+console.log(pet_id);
+
 doneBtn.addEventListener('click', async () => {
   // TODO: hard coded, need to figure how to get id
-  const user_id = 17;
+  const pet_id = document.querySelector('#pet_id').value;
   const petName = document.querySelector('#pet-name').value;
   const petBreed = document.querySelector('#pet-breed').value;
   const petDob = document.querySelector('#pet-dob').value;
@@ -28,7 +33,7 @@ doneBtn.addEventListener('click', async () => {
   });
   console.log(petName);
   const payload = {
-    user_id: user_id,
+    pet_id: pet_id,
     pet_name: petName,
     pet_breed: petBreed,
     pet_gender: petGender,
@@ -37,7 +42,7 @@ doneBtn.addEventListener('click', async () => {
     next_appointment: petNextappt,
   };
 
-  const response = await fetch(`/api/pet/${user_id}`, {
+  const response = await fetch(`/api/pet/${pet_id}`, {
     method: 'PUT',
     body: JSON.stringify(payload),
     headers: {
