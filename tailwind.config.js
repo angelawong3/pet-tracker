@@ -32,6 +32,7 @@ module.exports = {
         '40vh': '40vh',
         '60vh': '60vh',
         '80vh': '80vh',
+        130: '520px',
       },
       width: {
         '10vw': '10vw',
@@ -39,6 +40,7 @@ module.exports = {
         '60vw': '60vw',
         '80vw': '80vw',
         '90vw': '90vw',
+        195: '780px',
       },
       maxWidth: {
         276: '69rem',
