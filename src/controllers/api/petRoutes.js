@@ -10,7 +10,6 @@ const { Pet } = require('../../models');
 router.post('/', async (req, res) => {
   const body = req.body;
   body.user_id = req.session.user_id;
-
   try {
     const newPet = await Pet.create({
       ...body,
@@ -25,6 +24,8 @@ router.post('/', async (req, res) => {
 // tested, work on Postman
 router.put('/:id', async (req, res) => {
   try {
+    console.log(req.params.id);
+    console.log(req.body);
     const [editPet] = await Pet.update(req.body, {
       where: {
         id: req.params.id,

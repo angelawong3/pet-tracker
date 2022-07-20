@@ -1,5 +1,9 @@
     <div class="h-full bg-gray-100 flex flex-col">
-{{>publicNav}}
+      {{#if logged_in}}
+      {{>privateNav}}
+      {{else}}
+      {{>publicNav}}
+      {{/if}}
       <!-- Public Nav Bar partial -->
       <section class="flex-1 flex flex-col">
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
@@ -20,7 +24,7 @@
                   class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12 text-blue-500"
                 >
                   My Valuable Pet <br /><span class="text-white"
-                    >The best app for your Dog's needs!</span
+                    >The best app for your PET's needs!</span
                   >
                 </h1>
                 <p class="text-gray-300">
@@ -36,5 +40,5 @@
     </div>
     <!-- Footer Section -->
 {{>footer}}
-
+<script src="/js/login.js"></script>
     <script src="/js/logout.js"></script>
