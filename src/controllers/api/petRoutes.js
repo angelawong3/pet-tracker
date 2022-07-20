@@ -1,13 +1,12 @@
 const router = require('express').Router();
 const { Pet } = require('../../models');
 // Import the custom middleware
-// const withAuth = require('../middlewares/auth');
+const withAuth = require('../../utils/auth');
 
 // "/api/pet" endpoint
 
 // POST request to add a new pet, withAuth later
-// tested, work on Postman
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   const body = req.body;
   body.user_id = req.session.user_id;
   try {
@@ -21,8 +20,7 @@ router.post('/', async (req, res) => {
 });
 
 // PUT request to edit info of an existing pet
-// tested, work on Postman
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     console.log(req.params.id);
     console.log(req.body);
@@ -44,7 +42,7 @@ router.put('/:id', async (req, res) => {
 
 // DELETE request to del a pet
 // tested, work on Postman
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const petData = await Pet.destroy({
       where: {
