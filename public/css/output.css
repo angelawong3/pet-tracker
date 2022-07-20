@@ -4918,6 +4918,11 @@ textarea.form-control.is-invalid {
   padding-right: 1.25rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
 }
