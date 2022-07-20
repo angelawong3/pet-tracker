@@ -18,6 +18,7 @@ doneBtn.addEventListener('click', async (event) => {
   const id = document.querySelector('#pet_id').value;
   const petName = document.querySelector('#pet-name').textContent;
   const petBreed = document.querySelector('#pet-breed').textContent;
+  const petDob = document.querySelector('#pet-dob').textContent;
   const petGender = document.querySelector('#pet-gender').textContent;
   const petWeight = document.querySelector('#pet-weight').textContent;
   const petNextappt = document.querySelector('#pet-nextappt').textContent;
@@ -31,6 +32,7 @@ doneBtn.addEventListener('click', async (event) => {
     pet_name: petName,
     pet_breed: petBreed,
     pet_gender: petGender,
+    birth_date: petDob,
     pet_weight: petWeight,
     next_appointment: petNextappt,
   };
