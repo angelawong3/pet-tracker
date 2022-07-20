@@ -63,32 +63,33 @@
                     <div class="flex justify-center flex-wrap gap-6">
                       <!-- start of pet 1 card -->
                       <div class="flex justify-center w-full">
+                        {{#with pet}}
                         <div
                           class=" shadow-lg bg-gray-100 w-full min-h-screen"
                         >
-                          <a href="/dashboard/edit/{{pet.id}}">
-                          <input id="pet_id" type="hidden" name="pet_id" value={{pet.id}} />
+                          <a href="/dashboard/edit/{{id}}">
+                          <input id="pet_id" type="hidden" name="pet_id" value={{id}} />
                             <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
                             <img
                               class="rounded-full mx-auto p-6 aspect-square w-75 object-cover"
-                              src="{{pet.pet_picture}}"
+                              src="{{pet_picture}}"
                               alt=""
                             />
                           </a>
                           <div class="p-6 flex flex-col items-center mx-auto w-full md:w-3/4 bg-white rounded-lg mb-8">
                             <h5 class="text-gray-900 text-4xl font-bold mb-2">
-                              {{pet.pet_name}}
+                              {{pet_name}}
                             </h5>
                             <!-- start of notifications box -->
                             <div class="w-full flex flex-col items-center justify-center p-5">
                               <h5 class="border font-bold bg-blue-600 text-white p-3 text-left w-full lg:w-5/6 pl-6">
-                                {{pet.pet_name}}'s Notification
+                                {{pet_name}}'s Notification
                               </h5>
                               <div class="border w-full lg:w-5/6 ">
                                 <div
                                 class="border p-3 text-center"
                               >
-                                {{pet.pet_name}}'s Appointment is due {{format_date pet.next_appointment}}
+                                {{pet_name}}'s Appointment is due {{format_date next_appointment}}
                               </div>
                               {{!-- <div
                               class="border p-3 text-center font-semi"
@@ -115,7 +116,7 @@
                                     >
                                       Pet Name
                                     </div>
-                                    <p  id="pet-name" class="border p-3 text-center edit-field">{{pet.pet_name}}</p>
+                                    <p  id="pet-name" class="border p-3 text-center edit-field">{{pet_name}}</p>
                                   </div>
                                   <div class="">
                                     <div
@@ -123,7 +124,7 @@
                                     >
                                       Pet Breed
                                     </div>
-                                    <p  id="pet-breed" class="border p-3 text-center edit-field">{{pet.pet_breed}}</p>
+                                    <p  id="pet-breed" class="border p-3 text-center edit-field">{{pet_breed}}</p>
                                   </div>
                                   <div class="">
                                     <div
@@ -131,14 +132,14 @@
                                     >
                                       Date of Birth
                                     </div>
-                                    <p  id="pet-dob" class="border p-3 text-center edit-field">{{format_date pet.birth_date}}</p>
+                                    <p  id="pet-dob" class="border p-3 text-center edit-field">{{format_date birth_date}}</p>
                                   </div>
                                   <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >Gender
                                     </div>
-                                    <p  id="pet-gender" class="border p-3 text-center edit-field">{{pet.pet_gender}}</p>
+                                    <p  id="pet-gender" class="border p-3 text-center edit-field">{{pet_gender}}</p>
                                   </div>
                                   <div class="">
                                     <div 
@@ -146,7 +147,7 @@
                                     >
                                       Weight
                                     </div>
-                                    <p id="pet-weight" class="border p-3 text-center edit-field">{{pet.pet_weight}} Pounds</p>
+                                    <p id="pet-weight" class="border p-3 text-center edit-field">{{pet_weight}} Pounds</p>
                                   </div>
                                   <div class="">
                                     <div
@@ -154,7 +155,7 @@
                                     >
                                       Next Appointment
                                     </div>
-                                    <p id="pet-nextappt" class="border p-3 text-center edit-field">{{format_date pet.next_appointment}}</p>
+                                    <p id="pet-nextappt" class="border p-3 text-center edit-field">{{format_date next_appointment}}</p>
                                   </div>
                                 </div>
                               </div>
@@ -164,6 +165,7 @@
                             <!-- end of table-->
                           </div>
                         </div>
+                        {{/with}}
                       </div>
                       <!-- end of pet 1 card -->
                     <!--end of all pet cards container -->
