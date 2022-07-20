@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const { Pet, User } = require('../models');
+// Import the custom middleware
+const withAuth = require('../utils/auth');
 
 // dashboard route
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const petData = await Pet.findAll({
       where: { user_id: req.session.user_id },
-      // tested by hard coding user id:
-      // where: { user_id: 3 },
       include: [User],
     });
     const pets = petData.map((pet) => pet.get({ plain: true }));
@@ -21,15 +21,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-// "/dashboard/new"
-// to create new pet
-router.get('/new', (req, res) => {
-  // return res.send(req.session.user_id);
+// to create a new pet
+router.get('/new', withAuth, (req, res) => {
   res.render('createPet');
 });
 
 // to edit an existing pet
-router.get('/edit/:id', async (req, res) => {
+router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     const PetData = await Pet.findByPk(req.params.id);
 
