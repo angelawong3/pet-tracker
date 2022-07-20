@@ -108,7 +108,9 @@
                                   <div
                                   class="border p-3 text-center bg-blue-600 text-white font-semibold flex justify-between items-center w-full px-6"
                                 >
-                                  <p>Pet Info</p>  <div class="space-x-2"><button type="submit" id="edit-btn" class="p-1 rounded-lg px-5 bg-white text-blue-600 align">Edit</button> <button type="submit" id="done-btn" class="p-1 rounded-lg px-5 bg-white text-blue-600 align">Done</button></div>
+                                  <p>Pet Info</p>  <div class="space-x-2">
+                                    <button type="submit" id="edit-btn" class="p-1 rounded-lg px-5 bg-white text-blue-600 align">Edit</button> 
+                                    <button type="submit" id="done-btn" class="p-1 rounded-lg px-5 bg-white text-blue-600 align">Done</button></div>
                                 </div>
                                   <div class="">
                                     <div
@@ -126,14 +128,14 @@
                                     </div>
                                     <p  id="pet-breed" class="border p-3 text-center edit-field">{{pet_breed}}</p>
                                   </div>
-                                  <div class="">
+                                  {{!-- <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >
                                       Date of Birth
                                     </div>
                                     <p  id="pet-dob" class="border p-3 text-center edit-field">{{format_date birth_date}}</p>
-                                  </div>
+                                  </div> --}}
                                   <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
@@ -145,18 +147,18 @@
                                     <div 
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >
-                                      Weight
+                                      Weight (in pounds)
                                     </div>
-                                    <p id="pet-weight" class="border p-3 text-center edit-field">{{pet_weight}} Pounds</p>
+                                    <p id="pet-weight" class="border p-3 text-center edit-field">{{pet_weight}}</p>
                                   </div>
-                                  <div class="">
+                                  {{!-- <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >
                                       Next Appointment
                                     </div>
                                     <p id="pet-nextappt" class="border p-3 text-center edit-field">{{format_date next_appointment}}</p>
-                                  </div>
+                                  </div> --}}
                                 </div>
                               </div>
                               <!-- end of 2nd table -->
