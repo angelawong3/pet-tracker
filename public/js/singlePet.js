@@ -48,7 +48,7 @@ doneBtn.addEventListener('click', async (event) => {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert('Failed to edit your Pet Profile');
+    alert('Failed to edit the profile, please follow the format!');
   }
   document.location.replace('/dashboard');
 });

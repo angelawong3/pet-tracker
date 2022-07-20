@@ -33,7 +33,7 @@ router.put('/:id', withAuth, async (req, res) => {
     if (editPet > 0) {
       res.status(200).json(editPet);
     } else {
-      res.status(404).json({ message: 'Cannot edit, please try again!' });
+      res.status(404).json(err);
     }
   } catch (err) {
     res.status(500).json(err);
