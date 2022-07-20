@@ -18,22 +18,20 @@ console.log(pet_id);
 
 doneBtn.addEventListener('click', async () => {
   // TODO: hard coded, need to figure how to get id
-  const pet_id = document.querySelector('#pet_id').value;
-  const petName = document.querySelector('#pet-name').value;
-  const petBreed = document.querySelector('#pet-breed').value;
-  const petDob = document.querySelector('#pet-dob').value;
-  const petGender = document.querySelector('#pet-gender').value;
-  const petWeight = document.querySelector('#pet-weight').value;
-  const petNextappt = document.querySelector('#pet-nextappt').value;
+  const id = document.querySelector('#pet_id').value;
+  const petName = document.querySelector('#pet-name').textContent;
+  const petBreed = document.querySelector('#pet-breed').textContent;
+  const petDob = document.querySelector('#pet-dob').textContent;
+  const petGender = document.querySelector('#pet-gender').textContent;
+  const petWeight = document.querySelector('#pet-weight').textContent;
+  const petNextappt = document.querySelector('#pet-nextappt').textContent;
   doneBtn.style.display = 'none';
   editBtn.style.display = 'block';
   editFields.forEach((el) => {
     el.contentEditable = false;
     el.style.backgroundColor = '#ffffff';
   });
-  console.log(petName);
   const payload = {
-    pet_id: pet_id,
     pet_name: petName,
     pet_breed: petBreed,
     pet_gender: petGender,
@@ -42,7 +40,7 @@ doneBtn.addEventListener('click', async () => {
     next_appointment: petNextappt,
   };
 
-  const response = await fetch(`/api/pet/${pet_id}`, {
+  const response = await fetch(`/api/pet/${id}`, {
     method: 'PUT',
     body: JSON.stringify(payload),
     headers: {
