@@ -69,7 +69,6 @@
                         >
                           <a href="/dashboard/edit/{{id}}">
                           <input id="pet_id" type="hidden" name="pet_id" value={{id}} />
-                            <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
                             <img
                               class="rounded-full mx-auto p-6 aspect-square w-75 object-cover"
                               src="{{pet_picture}}"
@@ -91,11 +90,11 @@
                               >
                                 {{pet_name}}'s Appointment is due {{format_date next_appointment}}
                               </div>
-                              {{!-- <div
+                              <div
                               class="border p-3 text-center font-semi"
                             >
-                              Lucky's Appointment is due 23/03/2022
-                            </div> --}}
+                              {{pet_name}}'s Next Year Appointment is due {{formatDate_plus next_appointment}}
+                            </div>
                               </div>
                             </div>
                             <!-- end of notifications box -->
@@ -132,14 +131,14 @@
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >
-                                      Date of Birth
+                                      Date of Birth 
                                     </div>
                                     <p  id="pet-dob" class="border p-3 text-center edit-field">{{format_date birth_date}}</p>
                                   </div> --}}
                                   <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
-                                    >Gender
+                                    >Gender (M/F)
                                     </div>
                                     <p  id="pet-gender" class="border p-3 text-center edit-field">{{pet_gender}}</p>
                                   </div>
@@ -151,14 +150,14 @@
                                     </div>
                                     <p id="pet-weight" class="border p-3 text-center edit-field">{{pet_weight}}</p>
                                   </div>
-                                  {{!-- <div class="">
+                                  <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >
-                                      Next Appointment
+                                      Next Appointment (YYYY-MM-DD)
                                     </div>
                                     <p id="pet-nextappt" class="border p-3 text-center edit-field">{{format_date next_appointment}}</p>
-                                  </div> --}}
+                                  </div>
                                 </div>
                               </div>
                               <!-- end of 2nd table -->

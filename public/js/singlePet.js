@@ -15,14 +15,12 @@ editBtn.addEventListener('click', () => {
 
 doneBtn.addEventListener('click', async (event) => {
   event.preventDefault();
-  // TODO: hard coded, need to figure how to get id
   const id = document.querySelector('#pet_id').value;
   const petName = document.querySelector('#pet-name').textContent;
   const petBreed = document.querySelector('#pet-breed').textContent;
-  // const petDob = document.querySelector('#pet-dob').textContent;
   const petGender = document.querySelector('#pet-gender').textContent;
   const petWeight = document.querySelector('#pet-weight').textContent;
-  // const petNextappt = document.querySelector('#pet-nextappt').textContent;
+  const petNextappt = document.querySelector('#pet-nextappt').textContent;
   doneBtn.style.display = 'none';
   editBtn.style.display = 'block';
   editFields.forEach((el) => {
@@ -33,9 +31,8 @@ doneBtn.addEventListener('click', async (event) => {
     pet_name: petName,
     pet_breed: petBreed,
     pet_gender: petGender,
-    // birth_date: petDob,
     pet_weight: petWeight,
-    // next_appointment: petNextappt,
+    next_appointment: petNextappt,
   };
 
   const response = await fetch(`/api/pet/${id}`, {
