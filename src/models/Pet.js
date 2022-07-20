@@ -22,11 +22,17 @@ Pet.init(
     pet_gender: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isIn: [['M', 'F']],
+      },
     },
     birth_date: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+      validate: {
+        isDate: true,
+      },
     },
     pet_weight: {
       type: DataTypes.INTEGER,
@@ -35,10 +41,16 @@ Pet.init(
     next_appointment: {
       type: DataTypes.DATE,
       allowNull: false,
+      validate: {
+        isDate: true,
+      },
     },
     pet_picture: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isUrl: true,
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -49,17 +61,6 @@ Pet.init(
     },
   },
   {
-    // do we need the hooks here?
-    // hooks: {
-    //   beforeCreate: async (newUserData) => {
-    //     newUserData.email = await newUserData.email.toLowerCase();
-    //     return newUserData;
-    //   },
-    //   beforeUpdate: async (updatedUserData) => {
-    //     updatedUserData.email = await updatedUserData.email.toLowerCase();
-    //     return updatedUserData;
-    //   },
-    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,
