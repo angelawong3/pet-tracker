@@ -41,6 +41,7 @@ module.exports = {
         '80vw': '80vw',
         '90vw': '90vw',
         64: '256px',
+        75: '300px',
       },
       maxWidth: {
         276: '69rem',
