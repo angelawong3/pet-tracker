@@ -22,8 +22,6 @@ router.post('/', withAuth, async (req, res) => {
 // PUT request to edit info of an existing pet
 router.put('/:id', withAuth, async (req, res) => {
   try {
-    console.log(req.params.id);
-    console.log(req.body);
     const [editPet] = await Pet.update(req.body, {
       where: {
         id: req.params.id,
@@ -41,7 +39,6 @@ router.put('/:id', withAuth, async (req, res) => {
 });
 
 // DELETE request to del a pet
-// tested, work on Postman
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const petData = await Pet.destroy({
