@@ -4543,6 +4543,10 @@ textarea.form-control.is-invalid {
   justify-content: flex-start;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
