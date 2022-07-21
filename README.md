@@ -59,7 +59,7 @@ If you would like to contribute on this project at all, please contact anyone of
 ```
 - Deployed Link: 
 
-- Heroku Link: 
+- Heroku Link: https://fathomless-atoll-47010.herokuapp.com/
 ```
 
 ## Screenshots
