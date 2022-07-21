@@ -1,5 +1,3 @@
-console.log('in logout.js');
-
 const logout = async (e) => {
   e.preventDefault();
   const response = await fetch('/api/user/logout', {

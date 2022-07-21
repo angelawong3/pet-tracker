@@ -1,5 +1,9 @@
     <div class="bg-gray-100 flex flex-col">
-{{>publicNav}}
+      {{#if logged_in}}
+      {{>privateNav}}
+      {{else}}
+      {{>publicNav}}
+      {{/if}}
       <!-- Public Nav Bar partial -->
       <section class="flex-1 flex flex-col">
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->

@@ -1,5 +1,3 @@
-console.log('in singlePet.js');
-
 const editFields = document.querySelectorAll('.edit-field');
 const editBtn = document.querySelector('#edit-btn');
 const doneBtn = document.querySelector('#done-btn');
