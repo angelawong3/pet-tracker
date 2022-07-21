@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, User } = require('../models');
+const { Pet, User, PetPicture } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
@@ -23,7 +23,30 @@ router.get('/', withAuth, async (req, res) => {
 
 // gallery route
 router.get('/gallery', withAuth, async (req, res) => {
-  res.render('gallery', { logged_in: req.session.logged_in });
+  try {
+    const picData = await PetPicture.findAll();
+    const pics = picData.map((pic) => pic.get({ plain: true }));
+
+    res.render('gallery', {
+      pics,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.redirect('login');
+  }
+});
+
+// to add pics
+router.post('/gallery/new', withAuth, async (req, res) => {
+  const body = req.body;
+  try {
+    const newPic = await PetPicture.create({
+      ...body,
+    });
+    return res.status(200).json(newPic);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 // to create a new pet
