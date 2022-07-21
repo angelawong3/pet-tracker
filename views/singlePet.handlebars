@@ -1,7 +1,7 @@
     <div class=" bg-gray-100 flex">
       <section class="flex-1 flex flex-col">
         <!-- private nav bar partial -->
-{{>privateNav}}
+        {{>privateNav}}
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
           class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat flex flex-col justify-center h-min-screen"
@@ -72,7 +72,7 @@
                             <img
                               class="rounded-full mx-auto p-6 aspect-square w-75 object-cover"
                               src="{{pet_picture}}"
-                              alt=""
+                              alt="pet picture"
                             />
                           </a>
                           <div class="p-6 flex flex-col items-center mx-auto w-full md:w-3/4 bg-white rounded-lg mb-8">
@@ -157,9 +157,16 @@
                                       Next Appointment (YYYY-MM-DD)
                                     </div>
                                     <p id="pet-nextappt" class="border p-3 text-center edit-field">{{format_date next_appointment}}</p>
+                                  </div> 
+                                  <div class="border p-3 text-center bg-blue-600 text-white font-semibold flex justify-between items-center w-full px-6"> 
+                                  <div class="space-x-2">
+                                  <button
+                                  class="p-1 rounded-lg px-5 bg-white text-blue-600 align"
+                                  type="click"
+                                  id="delete-btn"
+                                  data-id={{id}}>Delete</button></div></div>
                                   </div>
-                                </div>
-                              </div>
+                                  </div>
                               <!-- end of 2nd table -->
                             </div>
                           </div>
@@ -168,6 +175,7 @@
                         </div>
                         {{/with}}
                       </div>
+
                       <!-- end of pet 1 card -->
                     <!--end of all pet cards container -->
                   </div>
@@ -178,10 +186,10 @@
             </div>
           </section>
         </div>
-      </section>
-    </div>
+
     <!-- Footer Section -->
 {{>footer}}
 
 <script src="/js/singlePet.js"></script>
+<script src="/js/delPet.js"></script>
 <script src="/js/logout.js"></script>
