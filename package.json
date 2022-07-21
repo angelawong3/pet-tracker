@@ -10,7 +10,7 @@
   "scripts": {
     "buildtw": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css",
     "watch": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css --watch",
-    "start": "npm run buildtw && nodemon src/server.js",
+    "start": "npm run buildtw && node src/server.js",
     "seed": "node src/seeds/seed.js",
     "lint": "eslint \"**/*.js\"",
     "lint-fix": "eslint --fix \"**/*.js\"",
