@@ -1,8 +1,8 @@
-# mvp - My Valuable Pet
+# MVP - My Valuable Pet
 
 ## Description
 
-This application has been designed by team-express for coding bootcamp at the University of Birmingham. This full-stack application has been designed with pet owners in mind, allowing the user to add their pets to their account & store information such as their pets weight & next appointment. 
+This application has been designed by team-express for coding bootcamp at the University of Birmingham. This full-stack application has been designed with pet owners in mind, giving the user the ability to keep track of all their pets needs and data.
 
 
 ## Table of Contents
@@ -14,8 +14,9 @@ This application has been designed by team-express for coding bootcamp at the Un
 |[User Story](#user-story)| How we expect the user to interact with our application|
 |[Installation](#installation)| Instructions on how to install the application  |
 [Usage](#usage)| Find out how you can start using the application |
+[Testing](#testing) | Find out how you can ensure the back-end is working |
 [Contributing](#contributing)| Find out how you can contribute to the application if you have any improvements or bug fixes|
-[Deployed Links](#deployed-links )|  |
+[Deployed Links](#deployed-links )| Live Deployed link & Heroku link |
 [Screenshots](#screenshots)| See a preview of what the application can do |
 [Licence](#licence)| Find out what licence we are using |
 [Future Development](#future-development)| See the future plans for this application |
@@ -25,7 +26,7 @@ This application has been designed by team-express for coding bootcamp at the Un
 ```
 * As a user, I want to be able to create an account
 
-* As a user, I want to be able to add, edit & remove pets & their information.
+* As a user, I want to be able to add, edit & remove pets & their relative information.
 
 * As a user, I want to be able to view a gallery of all pets submitted by all users.
 
@@ -36,13 +37,18 @@ This application has been designed by team-express for coding bootcamp at the Un
 - Run npm install
 - Create a `.env` file and add your connection credentials
 - Run database schema if this is your first time running this.
-- Run 'npm run start'
-
 ```
 
 ## Usage
 ```
+- Run 'npm run start'
 
+```
+
+## Testing
+
+```
+'jest'
 ```
 
 ## Contributing
@@ -53,7 +59,7 @@ If you would like to contribute on this project at all, please contact anyone of
 ```
 - Deployed Link: 
 
-- Heroku Link: 
+- Heroku Link: https://fathomless-atoll-47010.herokuapp.com/
 ```
 
 ## Screenshots
@@ -61,7 +67,7 @@ If you would like to contribute on this project at all, please contact anyone of
 ![Alt text] ()
 
 ## Licence
-We are using a MIT Licence
+MIT Licence
 
 ## Future-Development
 

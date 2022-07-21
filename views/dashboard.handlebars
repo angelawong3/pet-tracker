@@ -1,6 +1,6 @@
           <!-- private nav bar partial -->
         {{>privateNav}}
-<div class="bg-gray-100 flex">
+<div class="bg-gray-100 flex flex-1">
       <section class="flex-1 flex flex-col">
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
@@ -14,7 +14,7 @@
           "
         >
           <!-- dashboard section container -->
-          <section class="h-full rounded">
+          <section class="h-full rounded flex-1">
             <div class="flex h-full flex-col lg:flex-row">
               <!-- start of side nav bar -->
               <div class="w-full lg:w-60 h-full shadow-md bg-white px-1">
@@ -23,7 +23,7 @@
                   <img
                     class="rounded-full w-50 h-28 mx-auto"
                     src="/images/MVP-without-bg.png"
-                    alt=""
+                    alt="logo for mvp"
                     srcset=""
                   />
                   <h2>Welcome to MVP! 🐶</h2>
@@ -32,6 +32,16 @@
                 <!-- end of image container div -->
                 <!-- start of side button links -->
                 <ul>
+                     <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="/dashboard"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                    >
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
+                      Overview </a
+                    ></li>
                   <li>
                     <a
                       class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
@@ -71,7 +81,7 @@
                             <img
                               class="rounded-t-lg h-64 w-96 object-cover object-center"
                                 src={{pet_picture}}
-                              alt=""
+                              alt="picture of pet added by user"
                             />
                           <div class="p-6 flex flex-col items-center">
                             <h5 class="text-gray-900 text-xl font-medium mb-2">{{pet_name}}

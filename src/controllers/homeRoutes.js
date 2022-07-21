@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Pet, User } = require('../models');
 
-// TODO: Import the custom middleware const withAuth = require('../middlewares/auth');
-
 // get homepage
 router.get('/', async (req, res) => {
   res.render('homepage', { logged_in: req.session.logged_in });
@@ -11,7 +9,7 @@ router.get('/', async (req, res) => {
 // login route
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/dashboard', { logged_in: req.session.logged_in });
+    res.render('dashboard', { logged_in: req.session.logged_in });
     return;
   }
 

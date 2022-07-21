@@ -1,7 +1,7 @@
     <div class=" bg-gray-100 flex">
       <section class="flex-1 flex flex-col">
         <!-- private nav bar partial -->
-{{>privateNav}}
+        {{>privateNav}}
         <!-- background image courtesy of Jamie Street https://unsplash.com/photos/UtrE5DcgEyg Free to use -->
         <div
           class="px-6 py-12 md:px-12 bg-gray-100 text-gray-800 text-center lg:text-left style flex-1 bg-center bg-cover bg-no-repeat flex flex-col justify-center h-min-screen"
@@ -23,7 +23,7 @@
                   <img
                     class="rounded-full w-50 h-28 mx-auto"
                     src="/images/MVP-without-bg.png"
-                    alt=""
+                    alt="logo"
                     srcset=""
                   />
                   <h2>Welcome to MVP! 🐶</h2>
@@ -32,6 +32,16 @@
                 <!-- end of image container div -->
                 <!-- start of side button links -->
                 <ul>
+                      <li>
+                    <a
+                      class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
+                      href="/dashboard"
+                      data-mdb-ripple="true"
+                      data-mdb-ripple-color="dark"
+                    >
+                      <i class="fa-solid fa-paw fa-lg mr-2"></i>
+                      Overview </a
+                    ></li>
                   <li>
                     <a
                       class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out"
@@ -69,11 +79,10 @@
                         >
                           <a href="/dashboard/edit/{{id}}">
                           <input id="pet_id" type="hidden" name="pet_id" value={{id}} />
-                            <!-- courtesy of Victor Grabarczyk https://unsplash.com/photos/N04FIfHhv_k  -->
                             <img
                               class="rounded-full mx-auto p-6 aspect-square w-75 object-cover"
                               src="{{pet_picture}}"
-                              alt=""
+                              alt="pet picture"
                             />
                           </a>
                           <div class="p-6 flex flex-col items-center mx-auto w-full md:w-3/4 bg-white rounded-lg mb-8">
@@ -91,11 +100,11 @@
                               >
                                 {{pet_name}}'s Appointment is due {{format_date next_appointment}}
                               </div>
-                              {{!-- <div
+                              <div
                               class="border p-3 text-center font-semi"
                             >
-                              Lucky's Appointment is due 23/03/2022
-                            </div> --}}
+                              {{pet_name}}'s Next Year Appointment is due {{formatDate_plus next_appointment}}
+                            </div>
                               </div>
                             </div>
                             <!-- end of notifications box -->
@@ -128,18 +137,18 @@
                                     </div>
                                     <p  id="pet-breed" class="border p-3 text-center edit-field">{{pet_breed}}</p>
                                   </div>
-                                  {{!-- <div class="">
-                                    <div
-                                      class="border p-3 text-center bg-gray-100 text-black font-semibold"
-                                    >
-                                      Date of Birth
-                                    </div>
-                                    <p  id="pet-dob" class="border p-3 text-center edit-field">{{format_date birth_date}}</p>
-                                  </div> --}}
                                   <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
-                                    >Gender
+                                    >
+                                      Date of Birth (YYYY-MM-DD)
+                                    </div>
+                                    <p  id="pet-dob" class="border p-3 text-center edit-field">{{format_date birth_date}}</p>
+                                  </div>
+                                  <div class="">
+                                    <div
+                                      class="border p-3 text-center bg-gray-100 text-black font-semibold"
+                                    >Gender (M/F)
                                     </div>
                                     <p  id="pet-gender" class="border p-3 text-center edit-field">{{pet_gender}}</p>
                                   </div>
@@ -151,16 +160,25 @@
                                     </div>
                                     <p id="pet-weight" class="border p-3 text-center edit-field">{{pet_weight}}</p>
                                   </div>
-                                  {{!-- <div class="">
+                                  <div class="">
                                     <div
                                       class="border p-3 text-center bg-gray-100 text-black font-semibold"
                                     >
-                                      Next Appointment
+                                      Next Appointment (YYYY-MM-DD)
                                     </div>
                                     <p id="pet-nextappt" class="border p-3 text-center edit-field">{{format_date next_appointment}}</p>
-                                  </div> --}}
-                                </div>
-                              </div>
+                                  </div> 
+                                  <div class="border p-3 text-center bg-blue-600 text-white font-semibold flex justify-end items-center w-full px-6"> 
+                                  <div class="space-x-2">
+                                  <button
+                                  class="p-1 rounded-lg px-5 bg-red-600 text-white "
+                                  type="click"
+                                  id="delete-btn"
+                                  data-id={{id}}>Delete</button>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
                               <!-- end of 2nd table -->
                             </div>
                           </div>
@@ -169,6 +187,7 @@
                         </div>
                         {{/with}}
                       </div>
+
                       <!-- end of pet 1 card -->
                     <!--end of all pet cards container -->
                   </div>
@@ -179,10 +198,10 @@
             </div>
           </section>
         </div>
-      </section>
-    </div>
+
     <!-- Footer Section -->
 {{>footer}}
 
 <script src="/js/singlePet.js"></script>
+<script src="/js/delPet.js"></script>
 <script src="/js/logout.js"></script>

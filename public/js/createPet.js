@@ -1,5 +1,3 @@
-console.log('in createPet.js');
-
 const handleCreatePet = async (event) => {
   event.preventDefault();
 
@@ -39,10 +37,10 @@ const handleCreatePet = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to create post. Please try again');
+      alert('Failed to create profile. Please follow the format');
     }
   } else {
-    alert('Failed to create post. Please Fill in all fields');
+    alert('Failed to create profile. Please Fill in all fields');
   }
 };
 

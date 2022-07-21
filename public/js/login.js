@@ -1,5 +1,3 @@
-console.log('in login.js');
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -19,7 +17,7 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/dashboard');
     } else {
-      alert('unable to log in please try again');
+      alert('Incorrect user name or password, please try again!');
     }
   }
 };
