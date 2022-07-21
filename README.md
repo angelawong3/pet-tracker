@@ -1,8 +1,8 @@
-# mvp - My Valuable Pet
+# MVP - My Valuable Pet
 
 ## Description
 
-This application has been designed by team-express for coding bootcamp at the University of Birmingham. This full-stack application has been designed with pet owners in mind, allowing the user to add their pets to their account & store information such as their pets weight & next appointment. 
+This application has been designed by team-express for coding bootcamp at the University of Birmingham. This full-stack application has been designed with pet owners in mind, giving the user the ability to keep track of all their pets needs and data.
 
 
 ## Table of Contents
@@ -25,7 +25,7 @@ This application has been designed by team-express for coding bootcamp at the Un
 ```
 * As a user, I want to be able to create an account
 
-* As a user, I want to be able to add, edit & remove pets & their information.
+* As a user, I want to be able to add, edit & remove pets & their relative information.
 
 * As a user, I want to be able to view a gallery of all pets submitted by all users.
 
