@@ -1,7 +1,7 @@
 const Login = require ('./login.js');
 
-describe("POST /users", () => {
-  describe("given a username and password", () => {
+describe('POST /users', () => {
+  describe('given a username and password'), () => {
 
     test("should respond with a 200 status code", async () => {
       const response = await request(app).post("./login.js").send({
@@ -11,9 +11,8 @@ describe("POST /users", () => {
       expect(response.statusCode).toBe(200)
     })
 
-  })
     test("should specify json in the content type header", async () => {
-      const response = await request(app).post("./login.jslogin.js").send({
+      const response = await request(app).post("./login.js").send({
         username: "username",
         password: "password"
       })
@@ -26,7 +25,7 @@ describe("POST /users", () => {
       })
       expect(response.body.userId).toBeDefined()
     })
-  })
+  
 
   describe("when the username and password is missing", () => {
     test("should respond with a status code of 400", async () => {
@@ -41,5 +40,4 @@ describe("POST /users", () => {
       }
     });
   });
-
-})
+  
