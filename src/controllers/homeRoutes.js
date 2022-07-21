@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 // login route
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/dashboard', { logged_in: req.session.logged_in });
+    res.render('dashboard', { logged_in: req.session.logged_in });
     return;
   }
 
