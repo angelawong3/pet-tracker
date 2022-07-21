@@ -1,5 +1,3 @@
-console.log('in createPet.js');
-
 const handleCreatePet = async (event) => {
   event.preventDefault();
 
