@@ -21,6 +21,11 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+// gallery route
+router.get('/gallery', withAuth, (req, res) => {
+  res.render('gallery', { logged_in: req.session.logged_in });
+});
+
 // to create a new pet
 router.get('/new', withAuth, (req, res) => {
   res.render('createPet', { logged_in: req.session.logged_in });
