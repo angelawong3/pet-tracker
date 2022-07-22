@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, User, PetPicture } = require('../models');
+const { Pet, User } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
@@ -23,12 +23,12 @@ router.get('/', withAuth, async (req, res) => {
 
 // gallery route
 router.get('/gallery', (req, res) => {
-  res.render('gallery', { logged_in: req.session.logged_in });
+  res.render('gallery');
 });
 
 // to create a new pet
 router.get('/new', (req, res) => {
-  res.render('createPet', { logged_in: req.session.logged_in });
+  res.render('createPet');
 });
 
 // to edit an existing pet
@@ -40,7 +40,6 @@ router.get('/edit/:id', async (req, res) => {
       const pet = PetData.get({ plain: true });
       res.render('singlePet', {
         pet,
-        logged_in: req.session.logged_in,
       });
     } else {
       alert('Failed to edit pet');
