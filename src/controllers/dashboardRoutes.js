@@ -22,17 +22,17 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // gallery route
-router.get('/gallery', withAuth, (req, res) => {
+router.get('/gallery', (req, res) => {
   res.render('gallery', { logged_in: req.session.logged_in });
 });
 
 // to create a new pet
-router.get('/new', withAuth, (req, res) => {
+router.get('/new', (req, res) => {
   res.render('createPet', { logged_in: req.session.logged_in });
 });
 
 // to edit an existing pet
-router.get('/edit/:id', withAuth, async (req, res) => {
+router.get('/edit/:id', async (req, res) => {
   try {
     const PetData = await Pet.findByPk(req.params.id);
 
