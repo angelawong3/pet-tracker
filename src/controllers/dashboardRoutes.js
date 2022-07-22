@@ -21,40 +21,6 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// gallery route
-router.get(
-  '/gallery',
-  // withAuth,
-  async (req, res) => {
-    // try {
-    const picData = await PetPicture.findAll();
-    const pics = picData.map((pic) => pic.get({ plain: true }));
-
-    console.log(pics);
-
-    res.render('gallery', {
-      pics,
-      // logged_in: req.session.logged_in,
-    });
-    // } catch (err) {
-    //   res.redirect('login');
-    // }
-  }
-);
-
-// to add pics
-router.post('/gallery/new', withAuth, async (req, res) => {
-  const body = req.body;
-  try {
-    const newPic = await PetPicture.create({
-      ...body,
-    });
-    return res.status(200).json(newPic);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-
 // to create a new pet
 router.get('/new', withAuth, (req, res) => {
   res.render('createPet', { logged_in: req.session.logged_in });
