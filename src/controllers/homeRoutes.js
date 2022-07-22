@@ -28,12 +28,12 @@ router.get('/signup', (req, res) => {
 
 // team route
 router.get('/team', (req, res) => {
-  res.render('team', { logged_in: req.session.logged_in });
+  res.render('team');
 });
 
 // about route
 router.get('/about', (req, res) => {
-  res.render('about', { logged_in: req.session.logged_in });
+  res.render('about');
 });
 
 module.exports = router;
