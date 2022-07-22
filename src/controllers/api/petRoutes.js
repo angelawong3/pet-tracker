@@ -1,7 +1,5 @@
 const router = require('express').Router();
 const { Pet } = require('../../models');
-// Import the custom middleware
-const withAuth = require('../../utils/auth');
 
 // "/api/pet" endpoint
 
