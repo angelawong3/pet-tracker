@@ -22,19 +22,25 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // gallery route
-router.get('/gallery', withAuth, async (req, res) => {
-  try {
+router.get(
+  '/gallery',
+  // withAuth,
+  async (req, res) => {
+    // try {
     const picData = await PetPicture.findAll();
     const pics = picData.map((pic) => pic.get({ plain: true }));
 
+    console.log(pics);
+
     res.render('gallery', {
       pics,
-      logged_in: req.session.logged_in,
+      // logged_in: req.session.logged_in,
     });
-  } catch (err) {
-    res.redirect('login');
+    // } catch (err) {
+    //   res.redirect('login');
+    // }
   }
-});
+);
 
 // to add pics
 router.post('/gallery/new', withAuth, async (req, res) => {

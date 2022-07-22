@@ -11,13 +11,13 @@ Pet.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Pet.hasMany(PetPicture, {
-  foreignKey: 'pet_id',
-  onDelete: 'CASCADE',
-});
+// Pet.hasMany(PetPicture, {
+//   foreignKey: 'pet_id',
+//   onDelete: 'CASCADE',
+// });
 
-PetPicture.belongsTo(Pet, {
-  foreignKey: 'pet_id',
-});
+// PetPicture.belongsTo(Pet, {
+//   foreignKey: 'pet_id',
+// });
 
 module.exports = { User, Pet, PetPicture };
