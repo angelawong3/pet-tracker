@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(0.7em) rotate(45deg);
+  background-color: #bb3e03ff;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-0.7em) rotate(-45deg);
+  background-color: #bb3e03ff;
+}
+
+.mob-nav-bar.active {
+  left: 0;
+}
+.panel.active {
+  flex: 10;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
