@@ -7,7 +7,6 @@ This application has been designed by team-express for coding bootcamp at the Un
 
 ## Table of Contents
 
-
 | Section| About that section |
 |----------- | ----------- |
 |[Description](#description)| More information about the application & the thoughts behind it |
@@ -42,41 +41,36 @@ This application has been designed by team-express for coding bootcamp at the Un
 ## Usage
 ```
 - Run 'npm run start'
-
 ```
 
 ## Testing
-
 ```
-'jest'
+- Run 'npm run test'
 ```
 
 ## Contributing
 If you would like to contribute on this project at all, please contact anyone of us via email or phone. All personal details are in our 'about us' page. 
 
-
 ## Deployed-Links
 ```
-- Deployed Link: 
-
-- Heroku Link: https://fathomless-atoll-47010.herokuapp.com/
+- Heroku Link: https://mvp-pet-app.herokuapp.com
 ```
 
 ## Screenshots
-![Alt text] ()
-![Alt text] ()
+![UI-before-login] (/public/images/UI1.png)
+![UI-after-login] (/public/images/UI2.png)
 
 ## Licence
 MIT Licence
 
 ## Future-Development
 
-- Branch out to other pets 
 - Send reminders or notifications via text or email 
-- Add more personalisation for each user - i.e related to their pet 
-- Share pets with other users (i.e a partner)  
-- Enable users to upload photos instead of URLs
-- Add space for potential advertising to make the application profitable
+- Share pets info with other users (i.e a partner)  
+- Allow users to share photos on gallery page
+- Add space for
+    i) pet adoption organizations
+    ii) potential advertising to make the application profitable
 
 
 ## Contact-Us
@@ -84,7 +78,7 @@ MIT Licence
 - Sinh Fu San: ss12932@my.Bristol.ac.uk 
 - Angela Wong: angelawong3@yahoo.com 
 - Alice Bryer: alicebryer123@gmail.com
-- Sachin Basandrai:
+- Sachin Basandrai: sachin.basandrai@mwphillips.co.uk
 - Anfal Ali: Anfal.ali_@hotmail.co.uk 
 - Rezowah Malek: rezowanmalek@gmail.com 
 
