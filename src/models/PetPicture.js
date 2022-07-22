@@ -16,13 +16,6 @@ PetPicture.init(
       allowNull: false,
       primaryKey: true,
     },
-    // pet_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'pet',
-    //     key: 'id',
-    //   },
-    // },
   },
   {
     sequelize,
