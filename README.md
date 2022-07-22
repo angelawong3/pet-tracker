@@ -13,9 +13,9 @@ This application has been designed by team-express for coding bootcamp at the Un
 |[User Story](#user-story)| How we expect the user to interact with our application|
 |[Installation](#installation)| Instructions on how to install the application  |
 [Usage](#usage)| Find out how you can start using the application |
-[Testing](#testing) | Find out how you can ensure the back-end is working |
+[Testing](#testing) | Test for JavaScript |
 [Contributing](#contributing)| Find out how you can contribute to the application if you have any improvements or bug fixes|
-[Deployed Links](#deployed-links )| Live Deployed link & Heroku link |
+[Deployed Link](#deployed-link )| Live Heroku link |
 [Screenshots](#screenshots)| See a preview of what the application can do |
 [Licence](#licence)| Find out what licence we are using |
 [Future Development](#future-development)| See the future plans for this application |
@@ -57,8 +57,8 @@ If you would like to contribute on this project at all, please contact anyone of
 ```
 
 ## Screenshots
-![UI-before-login] (/public/images/UI1.png)
-![UI-after-login] (/public/images/UI2.png)
+![UI-before-login](/public/images/UI1.png)
+![UI-after-login](/public/images/UI2.png)
 
 ## Licence
 MIT Licence
