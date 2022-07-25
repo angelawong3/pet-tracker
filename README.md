@@ -1,27 +1,25 @@
 # MVP - My Valuable Pet
 
-## Description
+### This is the repository for the pet tracker app - MVP
 
+### Table of Contents
+
+- [Description](#description)
+- [User Story](#user-story)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Technologies Used](#technologies-used)
+- [Deployed Link](#deployed-link)
+- [Future Development](#future-development)
+- [Contributing](#contributing)
+- [Licence](#licence)
+- [Contact Us](#contact-us)
+
+### Description
 This application has been designed by team-express for coding bootcamp at the University of Birmingham. This full-stack application has been designed with pet owners in mind, giving the user the ability to keep track of all their pets needs and data.
 
-
-## Table of Contents
-
-| Section| About that section |
-|----------- | ----------- |
-|[Description](#description)| More information about the application & the thoughts behind it |
-|[User Story](#user-story)| How we expect the user to interact with our application|
-|[Installation](#installation)| Instructions on how to install the application  |
-[Usage](#usage)| Find out how you can start using the application |
-[Testing](#testing) | Test for JavaScript |
-[Contributing](#contributing)| Find out how you can contribute to the application if you have any improvements or bug fixes|
-[Deployed Link](#deployed-link )| Live Heroku link |
-[Screenshots](#screenshots)| See a preview of what the application can do |
-[Licence](#licence)| Find out what licence we are using |
-[Future Development](#future-development)| See the future plans for this application |
-[Contact Us](#contact-us)| Contact the team behind the application |
-
-## User-Story
+### User Story
 ```
 * As a user, I want to be able to create an account
 
@@ -31,39 +29,36 @@ This application has been designed by team-express for coding bootcamp at the Un
 
 ```
 
-## Installation
+### Installation
 ```
 - Run npm install
 - Create a `.env` file and add your connection credentials
 - Run database schema if this is your first time running this.
 ```
 
-## Usage
+### Usage
 ```
 - Run 'npm run start'
 ```
 
-## Testing
-```
-- Run 'npm run test'
-```
-
-## Contributing
-If you would like to contribute on this project at all, please contact anyone of us via email or phone. All personal details are in our 'about us' page. 
-
-## Deployed-Links
-```
-- Heroku Link: https://mvp-pet-app.herokuapp.com
-```
-
-## Screenshots
+### Screenshots
 ![UI-before-login](/public/images/UI1.png)
 ![UI-after-login](/public/images/UI2.png)
 
-## Licence
-MIT Licence
+### Technologies Used
+1. JavaScript
+2. Tailwind CSS
+3. Node.js
+4. Express.js
+5. Handlebars.js
+6. Sequelize.js
+7. MySQL
+8. Postman
 
-## Future-Development
+### Deployed Link
+Heroku: https://mvp-pet-app.herokuapp.com
+
+### Future Development
 
 - Send reminders or notifications via text or email 
 - Share pets info with other users (i.e a partner)  
@@ -72,9 +67,14 @@ MIT Licence
     i) pet adoption organizations
     ii) potential advertising to make the application profitable
 
+### Contributing
+If you would like to contribute on this project at all, please contact anyone of us via email.
+All personal details are on our team page: https://mvp-pet-app.herokuapp.com/team
 
-## Contact-Us
+### Licence
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
+### Contact Us
 - Sinh Fu San: ss12932@my.Bristol.ac.uk 
 - Angela Wong: angelawong3@yahoo.com 
 - Alice Bryer: alicebryer123@gmail.com
